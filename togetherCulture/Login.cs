@@ -22,13 +22,6 @@ namespace togetherCulture
             MaximizeBox = false;
         }
 
-        private void redirectSignupBtn_Click(object sender, EventArgs e)
-        {
-            Signup signup = new Signup();
-            signup.Show();
-            Hide();
-        }
-
         private void loginBtn_Click(object sender, EventArgs e)
         {
             // Retrieve user input
@@ -62,5 +55,13 @@ namespace togetherCulture
                 ShowDialogMessage($"An error occurred during login: {ex.Message}", "Error");
             }
         }
+
+        private void redirectSignupBtn_Click(object sender, EventArgs e)
+        {
+            Signup signup = new Signup();
+            signup.Show();
+            Hide();
+        }
+
     }
 }

@@ -24,12 +24,12 @@ namespace togetherCulture
             MaximizeBox = false;
         }
 
-        private void signUpBtn_Click(object sender, EventArgs e)
+        private void signupBtn_Click(object sender, EventArgs e)
         {
             // Retrieve user input
             string username = usernameTxtBox.Text;
-            string email = emailTxtBox.Text;      
-            string password = passwordTxtBox.Text; 
+            string email = emailTxtBox.Text;
+            string password = passwordTxtBox.Text;
 
 
             // Validate input
@@ -85,6 +85,11 @@ namespace togetherCulture
             Login login = new Login();
             login.Show();
             Hide();
+        }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

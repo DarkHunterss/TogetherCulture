@@ -57,7 +57,15 @@ namespace togetherCulture
                     string storedHash = result.ToString();
                     string enteredHash = HashPassword(password);
 
-                    return storedHash == enteredHash; // True if the password matches
+                    if (storedHash == enteredHash)
+                    {
+                        Globals.CurrentLoggedInUser = username;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
 
                 return false; // User not found or password mismatch
@@ -67,6 +75,13 @@ namespace togetherCulture
                 Console.WriteLine($"Login Error: {ex.Message}");
                 return false;
             }
+        }
+
+
+        // Method to Log Out a User
+        public void Logout()
+        {
+            Globals.CurrentLoggedInUser = "";
         }
 
         // Method to Delete a User

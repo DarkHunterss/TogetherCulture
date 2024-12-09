@@ -20,3 +20,6 @@ C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCul
 C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.csproj.CoreCompileInputs.cache
 C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.exe
 C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.pdb
+C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.Dashboard.resources
+C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\together.AA98211D.Up2Date

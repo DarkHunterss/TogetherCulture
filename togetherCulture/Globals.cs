@@ -5,12 +5,16 @@ namespace togetherCulture
 {
     internal static class Globals
     {
-        // Example of global variables
+        // global variables
         public static string AppName { get; set; } = "Together Culture";
         public static string Version { get; set; } = "1.0.0";
+        public static string CurrentLoggedInUser { get; set; } = "";
+
         public static string ConnectionString { get; set; }
 
-        // Example of a global constant
+
+
+        // global constant
         public const string SupportEmail = "support@togetherculture.com";
 
         static Globals()
@@ -53,7 +57,7 @@ namespace togetherCulture
             }
         }
 
-        // Example of a global method
+        // global method
         public static void PrintAppInfo()
         {
             Console.WriteLine($"App Name: {AppName}");

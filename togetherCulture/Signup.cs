@@ -86,11 +86,6 @@ namespace togetherCulture
             login.Show();
             Hide();
         }
-
-        private void loginBtn_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }

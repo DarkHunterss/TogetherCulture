@@ -34,14 +34,14 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.usernameTxtBox = new System.Windows.Forms.TextBox();
+            this.emailTxtBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.passwordTxtBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.singupBtn = new System.Windows.Forms.Button();
             this.redirectLoginBtn = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.emailTxtBox = new System.Windows.Forms.TextBox();
-            this.passwordTxtBox = new System.Windows.Forms.TextBox();
-            this.singupBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -114,6 +114,15 @@
             this.usernameTxtBox.Size = new System.Drawing.Size(396, 32);
             this.usernameTxtBox.TabIndex = 11;
             // 
+            // emailTxtBox
+            // 
+            this.emailTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTxtBox.Location = new System.Drawing.Point(32, 140);
+            this.emailTxtBox.Margin = new System.Windows.Forms.Padding(2);
+            this.emailTxtBox.Name = "emailTxtBox";
+            this.emailTxtBox.Size = new System.Drawing.Size(396, 32);
+            this.emailTxtBox.TabIndex = 14;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -125,6 +134,15 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Password";
             // 
+            // passwordTxtBox
+            // 
+            this.passwordTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTxtBox.Location = new System.Drawing.Point(32, 222);
+            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(2);
+            this.passwordTxtBox.Name = "passwordTxtBox";
+            this.passwordTxtBox.Size = new System.Drawing.Size(396, 32);
+            this.passwordTxtBox.TabIndex = 15;
+            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.singupBtn);
@@ -135,6 +153,19 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(395, 88);
             this.flowLayoutPanel2.TabIndex = 13;
+            // 
+            // singupBtn
+            // 
+            this.singupBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.singupBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.singupBtn.Location = new System.Drawing.Point(273, 50);
+            this.singupBtn.Margin = new System.Windows.Forms.Padding(25, 50, 3, 3);
+            this.singupBtn.Name = "singupBtn";
+            this.singupBtn.Size = new System.Drawing.Size(119, 36);
+            this.singupBtn.TabIndex = 22;
+            this.singupBtn.Text = "sign up";
+            this.singupBtn.UseVisualStyleBackColor = true;
+            this.singupBtn.Click += new System.EventHandler(this.signupBtn_Click);
             // 
             // redirectLoginBtn
             // 
@@ -171,36 +202,6 @@
             this.label9.Size = new System.Drawing.Size(401, 55);
             this.label9.TabIndex = 18;
             this.label9.Text = "Together Culture";
-            // 
-            // emailTxtBox
-            // 
-            this.emailTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTxtBox.Location = new System.Drawing.Point(32, 140);
-            this.emailTxtBox.Margin = new System.Windows.Forms.Padding(2);
-            this.emailTxtBox.Name = "emailTxtBox";
-            this.emailTxtBox.Size = new System.Drawing.Size(396, 32);
-            this.emailTxtBox.TabIndex = 14;
-            // 
-            // passwordTxtBox
-            // 
-            this.passwordTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTxtBox.Location = new System.Drawing.Point(32, 222);
-            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(2);
-            this.passwordTxtBox.Name = "passwordTxtBox";
-            this.passwordTxtBox.Size = new System.Drawing.Size(396, 32);
-            this.passwordTxtBox.TabIndex = 15;
-            // 
-            // singupBtn
-            // 
-            this.singupBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.singupBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.singupBtn.Location = new System.Drawing.Point(273, 50);
-            this.singupBtn.Margin = new System.Windows.Forms.Padding(25, 50, 3, 3);
-            this.singupBtn.Name = "singupBtn";
-            this.singupBtn.Size = new System.Drawing.Size(119, 36);
-            this.singupBtn.TabIndex = 22;
-            this.singupBtn.Text = "sign up";
-            this.singupBtn.UseVisualStyleBackColor = true;
             // 
             // Signup
             // 

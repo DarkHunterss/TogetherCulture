@@ -1,0 +1,11 @@
+C:\Users\Pritam\OneDrive\Desktop\projectNew\togetherCulture\togetherCulture\bin\Debug\togetherCulture.exe.config
+C:\Users\Pritam\OneDrive\Desktop\projectNew\togetherCulture\togetherCulture\bin\Debug\togetherCulture.exe
+C:\Users\Pritam\OneDrive\Desktop\projectNew\togetherCulture\togetherCulture\bin\Debug\togetherCulture.pdb
+C:\Users\Pritam\OneDrive\Desktop\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.csproj.AssemblyReference.cache
+C:\Users\Pritam\OneDrive\Desktop\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.Properties.Resources.resources
+C:\Users\Pritam\OneDrive\Desktop\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.SignUp.resources
+C:\Users\Pritam\OneDrive\Desktop\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.csproj.GenerateResource.cache
+C:\Users\Pritam\OneDrive\Desktop\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.csproj.CoreCompileInputs.cache
+C:\Users\Pritam\OneDrive\Desktop\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.exe
+C:\Users\Pritam\OneDrive\Desktop\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.pdb
+C:\Users\Pritam\OneDrive\Desktop\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.Login.resources

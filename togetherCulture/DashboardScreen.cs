@@ -13,9 +13,11 @@ namespace togetherCulture
 {
     public partial class DashboardScreen : UserControl
     {
-        public DashboardScreen()
+        private MainWindow _mainWindow;
+        public DashboardScreen(MainWindow mainWindow)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
 
             usernameLbl.Text = Globals.CurrentLoggedInUser.ToString();
 
@@ -93,9 +95,9 @@ namespace togetherCulture
             }
         }
 
-        private void DashboardScreen_Load(object sender, EventArgs e)
+        private void upgradeBtn_Click(object sender, EventArgs e)
         {
-
+            _mainWindow.upgradeBtn_Click();
         }
     }
 }

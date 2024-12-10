@@ -30,12 +30,13 @@ namespace togetherCulture
             screenController = new ScreenController(mainPanel);
 
             // Create and add UserControls to the ScreenController
-            var dashboardScreen = new DashboardScreen();
+            var dashboardScreen = new DashboardScreen(this);
             var connectionBoardScreen = new ConnectionBoardScreen();
             var documentsScreen = new DocumentsScreen();
             var digitalContentScreen = new DigitalContentScreen();
             var membersScreen = new MembersScreen();
             var eventsScreen = new EventsScreen();
+            var membershipScreen = new MembershipScreen(this);
 
             screenController.AddScreen("Dashboard", dashboardScreen);
             screenController.AddScreen("Connection board", connectionBoardScreen);
@@ -43,7 +44,7 @@ namespace togetherCulture
             screenController.AddScreen("Digital content", digitalContentScreen);
             screenController.AddScreen("Members", membersScreen);
             screenController.AddScreen("Events", eventsScreen);
-
+            screenController.AddScreen("Membership", membershipScreen);
 
             // Show the default screen
             screenController.ShowScreen("Dashboard");
@@ -53,7 +54,7 @@ namespace togetherCulture
 
         }
 
-        private void HighlightSelectedTab(Label selectedLabel)
+        private void HighlightSelectedTab(Label selectedLabel = null)
         {
             // Reset the background color of all buttons
             foreach (Control control in sideMenuPanel.Controls)
@@ -65,27 +66,8 @@ namespace togetherCulture
             }
 
             // Highlight the selected button
-            selectedLabel.BackColor = Color.IndianRed; // Your chosen highlight color
-        }
-
-        private void ShowContactUsDialog()
-        {
-            using (ContactUsDialog contactDialog = new ContactUsDialog())
-            {
-                if (contactDialog.ShowDialog() == DialogResult.OK)
-                {
-                    string name = contactDialog.UserName;
-                    string email = contactDialog.UserEmail;
-                    string message = contactDialog.UserMessage;
-
-                    // Handle submitted data
-                    MessageBox.Show($"Thank you, {name}! Your message has been received.", "Confirmation");
-                }
-                else
-                {
-                    MessageBox.Show("Operation canceled.", "Canceled");
-                }
-            }
+            if (selectedLabel != null)
+                selectedLabel.BackColor = Color.IndianRed; // Your chosen highlight color
         }
 
         private void dashboardLbl_Click(object sender, EventArgs e)
@@ -130,9 +112,24 @@ namespace togetherCulture
             HighlightSelectedTab(eventsLbl);
         }
 
+        public void upgradeBtn_Click()
+        {
+            Text = "Membership";
+            screenController.ShowScreen("Membership");
+            HighlightSelectedTab(null);
+        }
+
+        public void backMembershipBtn_Click()
+        {
+            Text = "Dashboard";
+            screenController.ShowScreen("Dashboard");
+            HighlightSelectedTab(dashboardLbl);
+        }
+
         private void contactUsBtn_Click(object sender, EventArgs e)
         {
-            ShowContactUsDialog();
+            ContactUsDialog dialog = new ContactUsDialog();
+            dialog.ShowDialog();
         }
     }
 }

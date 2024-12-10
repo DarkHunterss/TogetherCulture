@@ -216,6 +216,7 @@
             this.upgradeBtn.TabIndex = 33;
             this.upgradeBtn.Text = "Upgrade";
             this.upgradeBtn.UseVisualStyleBackColor = false;
+            this.upgradeBtn.Click += new System.EventHandler(this.upgradeBtn_Click);
             // 
             // logoutBtn
             // 
@@ -248,10 +249,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(-3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 29);
+            this.label1.Size = new System.Drawing.Size(140, 29);
             this.label1.TabIndex = 30;
             this.label1.Text = "Dashboard";
             // 
@@ -271,7 +272,6 @@
             this.Controls.Add(this.label1);
             this.Name = "DashboardScreen";
             this.Size = new System.Drawing.Size(991, 649);
-            this.Load += new System.EventHandler(this.DashboardScreen_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userImg)).EndInit();

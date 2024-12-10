@@ -49,6 +49,7 @@
             this.label1.Size = new System.Drawing.Size(165, 29);
             this.label1.TabIndex = 51;
             this.label1.Text = "Digital content";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // DigitalContentScreen
             // 

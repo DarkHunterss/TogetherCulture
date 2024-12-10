@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,9 @@ namespace togetherCulture
             // Disable resizing
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
+
+            // Show screen in the center
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -44,6 +48,10 @@ namespace togetherCulture
                 if (isLoggedIn)
                 {
                     ShowDialogMessage("Login successful!", "Success");
+
+                    // update user last visit date info every time login is successful
+                    userManager.UpdateLastVisitInfo();
+
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.Show();
                     Hide();

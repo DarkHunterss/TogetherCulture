@@ -82,6 +82,7 @@
             this.contactUsBtn.TabIndex = 9;
             this.contactUsBtn.Text = "Contact us";
             this.contactUsBtn.UseVisualStyleBackColor = false;
+            this.contactUsBtn.Click += new System.EventHandler(this.contactUsBtn_Click);
             // 
             // label8
             // 

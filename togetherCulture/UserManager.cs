@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace togetherCulture
 {
@@ -23,11 +24,13 @@ namespace togetherCulture
             {
                 string hashedPassword = HashPassword(password);
 
-                string query = "INSERT INTO users (Username, Email, Password) VALUES (@Username, @Email, @Password)";
+                string query = "INSERT INTO users (Username, Email, Password, RoleID, JoinDate) VALUES (@Username, @Email, @Password, @RoleID, @JoinDate)";
                 SqlParameter[] parameters = {
                     new SqlParameter("@Username", username),
                     new SqlParameter("@Email", email),
-                    new SqlParameter("@Password", hashedPassword)
+                    new SqlParameter("@Password", hashedPassword),
+                    new SqlParameter("@RoleID", 1), 
+                    new SqlParameter("@JoinDate", DateTime.Now)
                 };
 
                 int rowsInserted = _dbConnection.executeNonQuery(query, parameters);
@@ -104,24 +107,38 @@ namespace togetherCulture
             }
         }
 
-        // Method to Update User Email
-        public bool UpdateEmail(string username, string newEmail)
+        // Method to Update last vist info of the loggedIn user 
+        public void UpdateLastVisitInfo()
         {
+            // update lastVisitDate field
             try
             {
-                string query = "UPDATE users SET Email = @Email WHERE Username = @Username";
+                string query = "UPDATE users SET LastVisitDate = @LastVisitDate";
                 SqlParameter[] parameters = {
-                    new SqlParameter("@Email", newEmail),
-                    new SqlParameter("@Username", username)
+                    new SqlParameter("@LastVisitDate", DateTime.Now),
                 };
 
-                int rowsUpdated = _dbConnection.executeNonQuery(query, parameters);
-                return rowsUpdated > 0;
+                _dbConnection.executeNonQuery(query, parameters);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"UpdateEmail Error: {ex.Message}");
-                return false;
+                Console.WriteLine($"UpdateLastVisit Error: {ex.Message}");
+            }
+
+            // update TotalVisits field
+            try
+            {
+                string query = "UPDATE users SET TotalVisits = TotalVisits + 1 WHERE Username = @Username";
+                SqlParameter[] parameters = {
+                    new SqlParameter("@Username", Globals.CurrentLoggedInUser)
+                };
+
+                object result = _dbConnection.executeScalar(query, parameters);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"UpdateLastVisit Error: {ex.Message}");
             }
         }
 

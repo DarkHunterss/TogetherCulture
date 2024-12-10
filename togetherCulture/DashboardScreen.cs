@@ -17,6 +17,8 @@ namespace togetherCulture
         public DashboardScreen()
         {
             InitializeComponent();
+
+            usernameLbl.Text = Globals.CurrentLoggedInUser.ToString();
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)
@@ -35,6 +37,11 @@ namespace togetherCulture
 
 
             
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

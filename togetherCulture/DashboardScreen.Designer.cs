@@ -43,6 +43,9 @@
             this.logoutBtn = new FontAwesome.Sharp.IconButton();
             this.notificationBtn = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.usernameLbl = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
@@ -53,9 +56,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.usernameLbl);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(2, 57);
             this.panel1.Margin = new System.Windows.Forms.Padding(10);
             this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(10);
             this.panel1.Size = new System.Drawing.Size(653, 163);
             this.panel1.TabIndex = 39;
             // 
@@ -215,6 +221,28 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Dashboard";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(499, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Welcome back,";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // usernameLbl
+            // 
+            this.usernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLbl.Location = new System.Drawing.Point(194, 115);
+            this.usernameLbl.Name = "usernameLbl";
+            this.usernameLbl.Size = new System.Drawing.Size(446, 24);
+            this.usernameLbl.TabIndex = 1;
+            this.usernameLbl.Text = "[username]";
+            this.usernameLbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
             // DashboardScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +259,8 @@
             this.Controls.Add(this.label1);
             this.Name = "DashboardScreen";
             this.Size = new System.Drawing.Size(991, 649);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.flowLayoutPanel7.ResumeLayout(false);
             this.flowLayoutPanel7.PerformLayout();
             this.flowLayoutPanel6.ResumeLayout(false);
@@ -263,5 +293,7 @@
         private FontAwesome.Sharp.IconButton logoutBtn;
         private FontAwesome.Sharp.IconButton notificationBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label usernameLbl;
+        private System.Windows.Forms.Label label2;
     }
 }

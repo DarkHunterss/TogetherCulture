@@ -23,6 +23,9 @@ namespace togetherCulture
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
 
+            // Show screen in the center
+            StartPosition = FormStartPosition.CenterScreen;
+
             // Initialize the ScreenController with the main panel
             screenController = new ScreenController(mainPanel);
 
@@ -106,6 +109,11 @@ namespace togetherCulture
             Text = "Events";
             screenController.ShowScreen("Events");
             HighlightSelectedTab(eventsLbl);
+        }
+
+        private void contactUsBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

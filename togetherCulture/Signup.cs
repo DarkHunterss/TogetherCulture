@@ -22,6 +22,9 @@ namespace togetherCulture
             // Disable resizing
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
+
+            // Show screen in the center
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void signupBtn_Click(object sender, EventArgs e)

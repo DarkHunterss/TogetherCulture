@@ -59,6 +59,9 @@
     <Compile Include="ConnectionBoardScreen.Designer.cs">
       <DependentUpon>ConnectionBoardScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContactUsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DashboardScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -103,7 +106,13 @@
     <Compile Include="MembersScreen.Designer.cs">
       <DependentUpon>MembersScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ScreenController.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="Signup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,7 +155,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>

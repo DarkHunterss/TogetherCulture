@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.userImg = new System.Windows.Forms.PictureBox();
+            this.usernameLbl = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
@@ -43,9 +46,8 @@
             this.logoutBtn = new FontAwesome.Sharp.IconButton();
             this.notificationBtn = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.usernameLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userImg)).BeginInit();
             this.flowLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
@@ -56,6 +58,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.userImg);
             this.panel1.Controls.Add(this.usernameLbl);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(2, 57);
@@ -64,6 +67,37 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(10);
             this.panel1.Size = new System.Drawing.Size(653, 163);
             this.panel1.TabIndex = 39;
+            // 
+            // userImg
+            // 
+            this.userImg.Location = new System.Drawing.Point(17, 10);
+            this.userImg.Name = "userImg";
+            this.userImg.Size = new System.Drawing.Size(145, 145);
+            this.userImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userImg.TabIndex = 2;
+            this.userImg.TabStop = false;
+            this.userImg.Click += new System.EventHandler(this.userImg_Click);
+            // 
+            // usernameLbl
+            // 
+            this.usernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLbl.Location = new System.Drawing.Point(168, 115);
+            this.usernameLbl.Name = "usernameLbl";
+            this.usernameLbl.Size = new System.Drawing.Size(472, 24);
+            this.usernameLbl.TabIndex = 1;
+            this.usernameLbl.Text = "[username]";
+            this.usernameLbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(499, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Welcome back,";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // flowLayoutPanel7
             // 
@@ -174,7 +208,7 @@
             // 
             this.upgradeBtn.BackColor = System.Drawing.Color.IndianRed;
             this.upgradeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.upgradeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upgradeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upgradeBtn.Location = new System.Drawing.Point(676, 0);
             this.upgradeBtn.Margin = new System.Windows.Forms.Padding(0);
             this.upgradeBtn.Name = "upgradeBtn";
@@ -221,28 +255,6 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Dashboard";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(499, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Welcome back,";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // usernameLbl
-            // 
-            this.usernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLbl.Location = new System.Drawing.Point(194, 115);
-            this.usernameLbl.Name = "usernameLbl";
-            this.usernameLbl.Size = new System.Drawing.Size(446, 24);
-            this.usernameLbl.TabIndex = 1;
-            this.usernameLbl.Text = "[username]";
-            this.usernameLbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
             // DashboardScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,8 +271,10 @@
             this.Controls.Add(this.label1);
             this.Name = "DashboardScreen";
             this.Size = new System.Drawing.Size(991, 649);
+            this.Load += new System.EventHandler(this.DashboardScreen_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userImg)).EndInit();
             this.flowLayoutPanel7.ResumeLayout(false);
             this.flowLayoutPanel7.PerformLayout();
             this.flowLayoutPanel6.ResumeLayout(false);
@@ -295,5 +309,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label usernameLbl;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox userImg;
     }
 }

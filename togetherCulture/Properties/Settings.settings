@@ -2,8 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="togetherCulture.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="ConnectionString" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\together_culture.mdf;Integrated Security=True;Connect Timeout=30";</Value>
+    <Setting Name="UserImagePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

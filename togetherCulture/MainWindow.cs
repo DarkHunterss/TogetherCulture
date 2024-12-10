@@ -68,6 +68,25 @@ namespace togetherCulture
             selectedLabel.BackColor = Color.IndianRed; // Your chosen highlight color
         }
 
+        private void ShowContactUsDialog()
+        {
+            using (ContactUsDialog contactDialog = new ContactUsDialog())
+            {
+                if (contactDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string name = contactDialog.UserName;
+                    string email = contactDialog.UserEmail;
+                    string message = contactDialog.UserMessage;
+
+                    // Handle submitted data
+                    MessageBox.Show($"Thank you, {name}! Your message has been received.", "Confirmation");
+                }
+                else
+                {
+                    MessageBox.Show("Operation canceled.", "Canceled");
+                }
+            }
+        }
 
         private void dashboardLbl_Click(object sender, EventArgs e)
         {
@@ -113,7 +132,7 @@ namespace togetherCulture
 
         private void contactUsBtn_Click(object sender, EventArgs e)
         {
-
+            ShowContactUsDialog();
         }
     }
 }

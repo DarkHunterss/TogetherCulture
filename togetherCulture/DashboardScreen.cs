@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,13 +13,13 @@ namespace togetherCulture
 {
     public partial class DashboardScreen : UserControl
     {
-        public event EventHandler CloseRequested;
-
         public DashboardScreen()
         {
             InitializeComponent();
 
             usernameLbl.Text = Globals.CurrentLoggedInUser.ToString();
+
+            LoadUserImage();
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)
@@ -34,12 +35,65 @@ namespace togetherCulture
             {
                 parentForm.Hide(); // Hide the parent window
             }
-
-
-            
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void LoadUserImage()
+        {
+            // Get the saved image path from application settings
+            string savedImagePath = Properties.Settings.Default.UserImagePath;
+
+            if (!string.IsNullOrEmpty(savedImagePath) && File.Exists(savedImagePath))
+            {
+                // Load the saved user image
+                userImg.Image = Image.FromFile(savedImagePath);
+            }
+            else
+            {
+                // Load a default image if no saved image is found
+                string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+                DirectoryInfo directoryInfo = new DirectoryInfo(currentDirectory);
+                while (directoryInfo != null && directoryInfo.Name != "togetherCulture")
+                {
+                    directoryInfo = directoryInfo.Parent;
+                }
+
+                string userImagePath = Path.Combine(directoryInfo.FullName, "resources", "defaultUserImg.png");
+                userImg.Image = Image.FromFile(userImagePath);
+            }
+        }
+
+        private void userImg_Click(object sender, EventArgs e)
+        {
+            // Open a file dialog to select a new image
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Title = "Select an Image";
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        // Load the selected image
+                        string selectedImagePath = openFileDialog.FileName;
+                        userImg.Image = Image.FromFile(selectedImagePath);
+
+                        // Save the image path to application settings
+                        Properties.Settings.Default.UserImagePath = selectedImagePath;
+                        Properties.Settings.Default.Save();
+
+                        MessageBox.Show("Image updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error loading image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void DashboardScreen_Load(object sender, EventArgs e)
         {
 
         }

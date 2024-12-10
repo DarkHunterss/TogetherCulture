@@ -29,3 +29,4 @@ C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCul
 C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.DocumentsScreen.resources
 C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.EventsScreen.resources
 C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.MembersScreen.resources
+C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.Resources.resources

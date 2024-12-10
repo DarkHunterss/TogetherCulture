@@ -21,5 +21,11 @@ C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCul
 C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.exe
 C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.pdb
 C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.Dashboard.resources
 C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\together.AA98211D.Up2Date
+C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.MainWindow.resources
+C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.ConnectionBoardScreen.resources
+C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.DashboardScreen.resources
+C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.DigitalContentScreen.resources
+C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.DocumentsScreen.resources
+C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.EventsScreen.resources
+C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.MembersScreen.resources

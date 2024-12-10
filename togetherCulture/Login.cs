@@ -44,8 +44,8 @@ namespace togetherCulture
                 if (isLoggedIn)
                 {
                     ShowDialogMessage("Login successful!", "Success");
-                    Dashboard dashboard = new Dashboard();
-                    dashboard.Show();
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
                     Hide();
                 }
                 else

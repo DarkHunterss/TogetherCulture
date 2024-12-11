@@ -53,12 +53,43 @@ namespace togetherCulture
 
                 if (isLoggedIn)
                 {
-                    // update user last visit date info every time login is successful
+                    // Check if preferences exist for this user
+                    if (!DoesUserPreferenceExist(Globals.CurrentLoggedInUserID))
+                    {
+                        // Show User Preference Screen
+                        using (UserPreferenceScreen preferenceScreen = new UserPreferenceScreen())
+                        {
+                            var result = preferenceScreen.ShowDialog();
+
+                            if (result == DialogResult.OK)
+                            {
+                                // Update user last visit date info every time login is successful
+                                userManager.UpdateLastVisitInfo();
+
+                                // Preferences saved successfully
+                                OpenMainWindow();
+                                this.Hide();
+                                return; // Exit to avoid reopening login
+                            }
+                            else
+                            {
+                                MessageBox.Show(
+                                    "You need to set up your preferences before proceeding to the dashboard.",
+                                    "Setup Required",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning
+                                );
+                                return; // Stay on the login form
+                            }
+                        }
+                    }
+
+                    // Update user last visit date info every time login is successful
                     userManager.UpdateLastVisitInfo();
 
-                    MainWindow mainWindow = new MainWindow();
-                    mainWindow.Show();
-                    Hide();
+                    // If preferences already exist, proceed to MainWindow
+                    OpenMainWindow();
+                    this.Hide();
                 }
                 else
                 {
@@ -70,6 +101,27 @@ namespace togetherCulture
                 ShowDialogMessage($"An error occurred during login: {ex.Message}", "Error");
             }
         }
+
+        // Helper Method to Open MainWindow
+        private void OpenMainWindow()
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show(); 
+        }
+
+
+        // Helper Method to Check User Preferences
+        private bool DoesUserPreferenceExist(int userId)
+        {
+            string query = "SELECT COUNT(1) FROM user_preference WHERE UserID = @UserId";
+            SqlParameter[] parameters = {
+                new SqlParameter("@UserId", userId)
+            };
+
+            object result = DBConnection.getConnectionInstance().executeScalar(query, parameters);
+            return Convert.ToInt32(result) > 0; // Returns true if preferences exist
+        }
+
 
         private void Login_KeyDown(object sender, KeyEventArgs e)
         {
@@ -85,11 +137,6 @@ namespace togetherCulture
             Signup signup = new Signup();
             signup.Show();
             Hide();
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -19,7 +19,7 @@ namespace togetherCulture
             InitializeComponent();
             _mainWindow = mainWindow;
 
-            usernameLbl.Text = Globals.CurrentLoggedInUser.ToString();
+            usernameLbl.Text = Globals.CurrentLoggedInUsername.ToString();
 
             LoadUserImage();
         }
@@ -99,5 +99,6 @@ namespace togetherCulture
         {
             _mainWindow.upgradeBtn_Click();
         }
+
     }
 }

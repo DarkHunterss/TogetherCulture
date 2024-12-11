@@ -48,26 +48,33 @@ namespace togetherCulture
         {
             try
             {
-                string query = "SELECT Password FROM users WHERE Username = @Username";
-                SqlParameter[] parameters = {
-                    new SqlParameter("@Username", username)
-                };
+                // First query: Fetch the user ID
+                string idQuery = "SELECT ID FROM users WHERE Username = @Username";
+                SqlParameter[] idParams = { new SqlParameter("@Username", username) };
+                object idResult = _dbConnection.executeScalar(idQuery, idParams);
 
-                object result = _dbConnection.executeScalar(query, parameters);
-
-                if (result != null)
+                if (idResult != null)
                 {
-                    string storedHash = result.ToString();
-                    string enteredHash = HashPassword(password);
+                    int userId = Convert.ToInt32(idResult); // Convert to int since ID is an integer
 
-                    if (storedHash == enteredHash)
+                    // Second query: Fetch the stored password
+                    string passwordQuery = "SELECT Password FROM users WHERE ID = @UserID";
+                    SqlParameter[] passwordParams = { new SqlParameter("@UserID", userId) };
+                    object passwordResult = _dbConnection.executeScalar(passwordQuery, passwordParams);
+
+                    if (passwordResult != null)
                     {
-                        Globals.CurrentLoggedInUser = username;
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
+                        string storedHash = passwordResult.ToString();
+                        string enteredHash = HashPassword(password);
+
+                        if (storedHash == enteredHash)
+                        {
+                            // Store the user details in global variables
+                            Globals.CurrentLoggedInUsername = username;
+                            Globals.CurrentLoggedInUserID = userId;
+
+                            return true;
+                        }
                     }
                 }
 
@@ -81,10 +88,13 @@ namespace togetherCulture
         }
 
 
+
+
+
         // Method to Log Out a User
         public void Logout()
         {
-            Globals.CurrentLoggedInUser = "";
+            Globals.CurrentLoggedInUsername = "";
         }
 
         // Method to Delete a User
@@ -130,7 +140,7 @@ namespace togetherCulture
             {
                 string query = "UPDATE users SET TotalVisits = TotalVisits + 1 WHERE Username = @Username";
                 SqlParameter[] parameters = {
-                    new SqlParameter("@Username", Globals.CurrentLoggedInUser)
+                    new SqlParameter("@Username", Globals.CurrentLoggedInUsername)
                 };
 
                 object result = _dbConnection.executeScalar(query, parameters);

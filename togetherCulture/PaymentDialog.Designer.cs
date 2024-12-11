@@ -17,144 +17,172 @@
 
         private void InitializeComponent()
         {
-            this.labelOrderSummary = new System.Windows.Forms.Label();
-            this.labelSubtotal = new System.Windows.Forms.Label();
-            this.labelTotal = new System.Windows.Forms.Label();
-            this.labelShippingAddress = new System.Windows.Forms.Label();
-            this.buttonChooseAddress = new System.Windows.Forms.Button();
-            this.labelPayment = new System.Windows.Forms.Label();
-            this.labelPaymentInfo = new System.Windows.Forms.Label();
-            this.labelContactInfo = new System.Windows.Forms.Label();
-            this.buttonPay = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.labelMembershipDetails = new System.Windows.Forms.Label();
+            this.textBoxCardholderName = new System.Windows.Forms.TextBox();
+            this.textBoxCardNumber = new System.Windows.Forms.TextBox();
+            this.paymentTypeTxtBox = new System.Windows.Forms.TextBox();
+            this.textBoxCVV = new System.Windows.Forms.TextBox();
+            this.labelCardholderName = new System.Windows.Forms.Label();
+            this.labelCardNumber = new System.Windows.Forms.Label();
+            this.labelExpiryDate = new System.Windows.Forms.Label();
+            this.labelCVV = new System.Windows.Forms.Label();
+            this.payButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // labelOrderSummary
+            // labelTitle
             // 
-            this.labelOrderSummary.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.labelOrderSummary.Location = new System.Drawing.Point(20, 20);
-            this.labelOrderSummary.Name = "labelOrderSummary";
-            this.labelOrderSummary.Size = new System.Drawing.Size(660, 30);
-            this.labelOrderSummary.TabIndex = 0;
-            this.labelOrderSummary.Text = "Order Summary";
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(20, 20);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(660, 40);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Confirm Your Payment";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelSubtotal
+            // labelMembershipDetails
             // 
-            this.labelSubtotal.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.labelSubtotal.Location = new System.Drawing.Point(20, 60);
-            this.labelSubtotal.Name = "labelSubtotal";
-            this.labelSubtotal.Size = new System.Drawing.Size(200, 20);
-            this.labelSubtotal.TabIndex = 1;
-            this.labelSubtotal.Text = "Subtotal: $12.99";
+            this.labelMembershipDetails.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelMembershipDetails.Location = new System.Drawing.Point(20, 80);
+            this.labelMembershipDetails.Name = "labelMembershipDetails";
+            this.labelMembershipDetails.Size = new System.Drawing.Size(660, 80);
+            this.labelMembershipDetails.TabIndex = 1;
+            this.labelMembershipDetails.Text = "Membership Details Go Here";
             // 
-            // labelTotal
+            // textBoxCardholderName
             // 
-            this.labelTotal.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.labelTotal.Location = new System.Drawing.Point(20, 90);
-            this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(200, 20);
-            this.labelTotal.TabIndex = 2;
-            this.labelTotal.Text = "Total: $12.99";
+            this.textBoxCardholderName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.textBoxCardholderName.Location = new System.Drawing.Point(250, 180);
+            this.textBoxCardholderName.Name = "textBoxCardholderName";
+            this.textBoxCardholderName.Size = new System.Drawing.Size(400, 25);
+            this.textBoxCardholderName.TabIndex = 3;
             // 
-            // labelShippingAddress
+            // textBoxCardNumber
             // 
-            this.labelShippingAddress.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.labelShippingAddress.Location = new System.Drawing.Point(20, 130);
-            this.labelShippingAddress.Name = "labelShippingAddress";
-            this.labelShippingAddress.Size = new System.Drawing.Size(200, 20);
-            this.labelShippingAddress.TabIndex = 3;
-            this.labelShippingAddress.Text = "Shipping Address:";
+            this.textBoxCardNumber.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.textBoxCardNumber.Location = new System.Drawing.Point(250, 220);
+            this.textBoxCardNumber.Name = "textBoxCardNumber";
+            this.textBoxCardNumber.Size = new System.Drawing.Size(400, 25);
+            this.textBoxCardNumber.TabIndex = 5;
             // 
-            // buttonChooseAddress
+            // paymentTypeTxtBox
             // 
-            this.buttonChooseAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonChooseAddress.Location = new System.Drawing.Point(226, 124);
-            this.buttonChooseAddress.Name = "buttonChooseAddress";
-            this.buttonChooseAddress.Size = new System.Drawing.Size(100, 30);
-            this.buttonChooseAddress.TabIndex = 4;
-            this.buttonChooseAddress.Text = "Choose";
-            this.buttonChooseAddress.UseVisualStyleBackColor = true;
-            this.buttonChooseAddress.Click += new System.EventHandler(this.ButtonChooseAddress_Click);
+            this.paymentTypeTxtBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.paymentTypeTxtBox.Location = new System.Drawing.Point(250, 260);
+            this.paymentTypeTxtBox.Name = "paymentTypeTxtBox";
+            this.paymentTypeTxtBox.Size = new System.Drawing.Size(150, 25);
+            this.paymentTypeTxtBox.TabIndex = 7;
             // 
-            // labelPayment
+            // textBoxCVV
             // 
-            this.labelPayment.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.labelPayment.Location = new System.Drawing.Point(20, 180);
-            this.labelPayment.Name = "labelPayment";
-            this.labelPayment.Size = new System.Drawing.Size(200, 20);
-            this.labelPayment.TabIndex = 5;
-            this.labelPayment.Text = "Payment:";
+            this.textBoxCVV.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.textBoxCVV.Location = new System.Drawing.Point(250, 300);
+            this.textBoxCVV.Name = "textBoxCVV";
+            this.textBoxCVV.Size = new System.Drawing.Size(100, 25);
+            this.textBoxCVV.TabIndex = 9;
             // 
-            // labelPaymentInfo
+            // labelCardholderName
             // 
-            this.labelPaymentInfo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.labelPaymentInfo.Location = new System.Drawing.Point(160, 180);
-            this.labelPaymentInfo.Name = "labelPaymentInfo";
-            this.labelPaymentInfo.Size = new System.Drawing.Size(200, 20);
-            this.labelPaymentInfo.TabIndex = 6;
-            this.labelPaymentInfo.Text = "MasterCard **** 1234";
+            this.labelCardholderName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.labelCardholderName.Location = new System.Drawing.Point(20, 180);
+            this.labelCardholderName.Name = "labelCardholderName";
+            this.labelCardholderName.Size = new System.Drawing.Size(200, 25);
+            this.labelCardholderName.TabIndex = 2;
+            this.labelCardholderName.Text = "Cardholder Name:";
             // 
-            // labelContactInfo
+            // labelCardNumber
             // 
-            this.labelContactInfo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.labelContactInfo.Location = new System.Drawing.Point(20, 230);
-            this.labelContactInfo.Name = "labelContactInfo";
-            this.labelContactInfo.Size = new System.Drawing.Size(200, 20);
-            this.labelContactInfo.TabIndex = 7;
-            this.labelContactInfo.Text = "Contact Info: john@example.com";
+            this.labelCardNumber.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.labelCardNumber.Location = new System.Drawing.Point(20, 220);
+            this.labelCardNumber.Name = "labelCardNumber";
+            this.labelCardNumber.Size = new System.Drawing.Size(200, 25);
+            this.labelCardNumber.TabIndex = 4;
+            this.labelCardNumber.Text = "Card Number:";
             // 
-            // buttonPay
+            // labelExpiryDate
             // 
-            this.buttonPay.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.buttonPay.Location = new System.Drawing.Point(400, 400);
-            this.buttonPay.Name = "buttonPay";
-            this.buttonPay.Size = new System.Drawing.Size(120, 40);
-            this.buttonPay.TabIndex = 8;
-            this.buttonPay.Text = "Pay";
-            this.buttonPay.UseVisualStyleBackColor = true;
-            this.buttonPay.Click += new System.EventHandler(this.ButtonPay_Click);
+            this.labelExpiryDate.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.labelExpiryDate.Location = new System.Drawing.Point(20, 260);
+            this.labelExpiryDate.Name = "labelExpiryDate";
+            this.labelExpiryDate.Size = new System.Drawing.Size(200, 25);
+            this.labelExpiryDate.TabIndex = 6;
+            this.labelExpiryDate.Text = "Card Type";
             // 
-            // buttonCancel
+            // labelCVV
             // 
-            this.buttonCancel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.buttonCancel.Location = new System.Drawing.Point(550, 400);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(120, 40);
-            this.buttonCancel.TabIndex = 9;
-            this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
+            this.labelCVV.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.labelCVV.Location = new System.Drawing.Point(20, 300);
+            this.labelCVV.Name = "labelCVV";
+            this.labelCVV.Size = new System.Drawing.Size(200, 25);
+            this.labelCVV.TabIndex = 8;
+            this.labelCVV.Text = "CVV:";
+            // 
+            // payButton
+            // 
+            this.payButton.BackColor = System.Drawing.Color.IndianRed;
+            this.payButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.payButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.payButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payButton.ForeColor = System.Drawing.Color.White;
+            this.payButton.Location = new System.Drawing.Point(150, 360);
+            this.payButton.Name = "payButton";
+            this.payButton.Size = new System.Drawing.Size(160, 40);
+            this.payButton.TabIndex = 10;
+            this.payButton.Text = "Pay now";
+            this.payButton.UseVisualStyleBackColor = false;
+            this.payButton.Click += new System.EventHandler(this.payButton_Click);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.BackColor = System.Drawing.Color.DarkGray;
+            this.cancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.ForeColor = System.Drawing.Color.White;
+            this.cancelButton.Location = new System.Drawing.Point(390, 360);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(160, 40);
+            this.cancelButton.TabIndex = 11;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // PaymentDialog
             // 
-            this.ClientSize = new System.Drawing.Size(700, 480);
-            this.Controls.Add(this.labelOrderSummary);
-            this.Controls.Add(this.labelSubtotal);
-            this.Controls.Add(this.labelTotal);
-            this.Controls.Add(this.labelShippingAddress);
-            this.Controls.Add(this.buttonChooseAddress);
-            this.Controls.Add(this.labelPayment);
-            this.Controls.Add(this.labelPaymentInfo);
-            this.Controls.Add(this.labelContactInfo);
-            this.Controls.Add(this.buttonPay);
-            this.Controls.Add(this.buttonCancel);
+            this.ClientSize = new System.Drawing.Size(684, 441);
+            this.Controls.Add(this.labelTitle);
+            this.Controls.Add(this.labelMembershipDetails);
+            this.Controls.Add(this.labelCardholderName);
+            this.Controls.Add(this.textBoxCardholderName);
+            this.Controls.Add(this.labelCardNumber);
+            this.Controls.Add(this.textBoxCardNumber);
+            this.Controls.Add(this.labelExpiryDate);
+            this.Controls.Add(this.paymentTypeTxtBox);
+            this.Controls.Add(this.labelCVV);
+            this.Controls.Add(this.textBoxCVV);
+            this.Controls.Add(this.payButton);
+            this.Controls.Add(this.cancelButton);
             this.Name = "PaymentDialog";
-            this.Text = "Payment Dialog";
+            this.Text = "Payment";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label labelOrderSummary;
-        private System.Windows.Forms.Label labelSubtotal;
-        private System.Windows.Forms.Label labelTotal;
-        private System.Windows.Forms.Label labelShippingAddress;
-        private System.Windows.Forms.Button buttonChooseAddress;
-        private System.Windows.Forms.Label labelPayment;
-        private System.Windows.Forms.Label labelPaymentInfo;
-        private System.Windows.Forms.Label labelContactInfo;
-        private System.Windows.Forms.Button buttonPay;
-        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label labelMembershipDetails;
+        private System.Windows.Forms.TextBox textBoxCardholderName;
+        private System.Windows.Forms.TextBox textBoxCardNumber;
+        private System.Windows.Forms.TextBox paymentTypeTxtBox;
+        private System.Windows.Forms.TextBox textBoxCVV;
+        private System.Windows.Forms.Label labelCardholderName;
+        private System.Windows.Forms.Label labelCardNumber;
+        private System.Windows.Forms.Label labelExpiryDate;
+        private System.Windows.Forms.Label labelCVV;
+        private System.Windows.Forms.Button payButton;
+        private System.Windows.Forms.Button cancelButton;
     }
 }

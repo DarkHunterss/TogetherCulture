@@ -8,7 +8,10 @@ namespace togetherCulture
         // global variables
         public static string AppName { get; set; } = "Together Culture";
         public static string Version { get; set; } = "1.0.0";
-        public static string CurrentLoggedInUser { get; set; } = "";
+
+        public static int CurrentLoggedInUserID { get; set; } = 0;
+        public static string CurrentLoggedInUsername { get; set; } = "";
+
 
         public static string ConnectionString { get; set; }
 

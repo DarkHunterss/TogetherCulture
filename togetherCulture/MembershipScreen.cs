@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -16,7 +17,7 @@ namespace togetherCulture
             _mainWindow = mainWindow;
 
             // Load memberships dynamically
-            LoadMemberships();
+            LoadMemberships(Globals.CurrentLoggedInUserID);
         }
 
         private void backMembershipBtn_Click(object sender, EventArgs e)
@@ -24,28 +25,31 @@ namespace togetherCulture
             _mainWindow.backMembershipBtn_Click();
         }
 
-        private void LoadMemberships()
+        private void LoadMemberships(int userId)
         {
             try
             {
                 // Clear existing controls from the table layout
                 tableLayoutPanel1.Controls.Clear();
 
-                // Query to fetch the first three active memberships
-                string query = "SELECT TOP 3 Name, Benefits, MonthlyFee FROM membership WHERE IsActive = 1";
+                // Fetch the user's current membership ID
+                string membershipQuery = "SELECT MembershipID FROM users WHERE ID = @UserId";
+                SqlParameter[] userParams = { new SqlParameter("@UserId", userId) };
+                object membershipIdObj = DBConnection.getConnectionInstance().executeScalar(membershipQuery, userParams);
+                int currentMembershipId = membershipIdObj != DBNull.Value ? Convert.ToInt32(membershipIdObj) : 0;
 
-                // Fetch data using DBConnection
-                DataTable membershipTable = DBConnection.getConnectionInstance().executeQuery(query);
+                // Query to fetch memberships
+                string membershipQueryAll = "SELECT ID, Name, Benefits, MonthlyFee FROM membership WHERE IsActive = 1";
+                DataTable membershipTable = DBConnection.getConnectionInstance().executeQuery(membershipQueryAll);
 
                 int recordCount = membershipTable.Rows.Count;
 
                 if (recordCount == 0)
                 {
-                    // Display a message if no memberships are available
                     Label noMembershipLabel = new Label
                     {
-                        Text = "No membership available at the moment.",
-                        Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold),
+                        Text = "No memberships available.",
+                        Font = new Font("Segoe UI", 14F, FontStyle.Bold),
                         TextAlign = ContentAlignment.MiddleCenter,
                         Dock = DockStyle.Fill
                     };
@@ -59,18 +63,18 @@ namespace togetherCulture
 
                     foreach (DataRow row in membershipTable.Rows)
                     {
-                        // Fetch data from the DataTable
+                        int membershipId = Convert.ToInt32(row["ID"]);
                         string name = row["Name"].ToString();
                         string benefits = row["Benefits"].ToString();
                         decimal monthlyFee = Convert.ToDecimal(row["MonthlyFee"]);
 
-                        // Create and add membership panel to the table layout
-                        var membershipPanel = CreateMembershipPanel(name, benefits, monthlyFee);
+                        bool isDisabled = membershipId <= currentMembershipId;
+
+                        var membershipPanel = CreateMembershipPanel(name, benefits, monthlyFee, membershipId, userId, isDisabled);
                         tableLayoutPanel1.Controls.Add(membershipPanel, column % 3, column / 3);
                         column++;
                     }
 
-                    // Adjust layout if memberships are available
                     AdjustTableLayout(recordCount);
                 }
             }
@@ -79,6 +83,8 @@ namespace togetherCulture
                 MessageBox.Show("Error loading memberships: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
 
 
         private void AdjustTableLayout(int recordCount)
@@ -106,73 +112,68 @@ namespace togetherCulture
             );
         }
 
-        private Panel CreateMembershipPanel(string name, string benefits, decimal monthlyFee, string extraFee = "")
+        private Panel CreateMembershipPanel(string name, string benefits, decimal monthlyFee, int membershipId, int userId, bool isDisabled = false)
         {
-            // Create a new panel
             Panel panel = new Panel
             {
                 BorderStyle = BorderStyle.FixedSingle,
                 Size = new Size(300, 420),
-                Margin = new Padding(15), // Adjusted for spacing between panels
-                BackColor = Color.White // Set white background for panels
+                Margin = new Padding(15),
+                BackColor = isDisabled ? Color.LightGray : Color.White // Disabled panels are grayed out
             };
 
-            // Membership name
             Label nameLabel = new Label
             {
                 Text = name,
-                Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold),
+                Font = new Font("Segoe UI", 12F, FontStyle.Bold),
                 TextAlign = ContentAlignment.MiddleCenter,
                 Dock = DockStyle.Top,
-                Height = 40 // Height adjusted for consistent spacing
+                Height = 40
             };
 
-            // Membership fee
             Label feeLabel = new Label
             {
-                Text = extraFee == string.Empty
-                    ? $"£{monthlyFee:0.00} / month"
-                    : $"£{monthlyFee:0.00} / month + {extraFee}",
+                Text = $"£{monthlyFee:0.00} / month",
                 Font = new Font("Segoe UI", 10F, FontStyle.Bold),
                 TextAlign = ContentAlignment.MiddleCenter,
                 Dock = DockStyle.Top,
-                Height = 30 // Adjusted for better spacing
+                Height = 30
             };
 
-            // Membership benefits
             Label benefitsLabel = new Label
             {
-                Text = FormatBenefits(benefits), // Each benefit on a new line
-                Font = new Font("Microsoft Sans Serif", 10F), // Larger font size for readability
-                TextAlign = ContentAlignment.TopCenter, // Centered text
+                Text = FormatBenefits(benefits),
+                Font = new Font("Segoe UI", 10F),
+                TextAlign = ContentAlignment.TopCenter,
                 Dock = DockStyle.Fill,
-                Padding = new Padding(10, 5, 10, 5), // Padding for spacing
+                Padding = new Padding(10, 5, 10, 5)
             };
 
-            // Sign up button
             Button signUpButton = new Button
             {
                 Text = "Sign up now",
-                Font = new Font("Segoe UI", 10F, FontStyle.Regular),
+                Font = new Font("Segoe UI Semibold", 12F, FontStyle.Regular),
+                FlatStyle = FlatStyle.Flat,
+                ForeColor = isDisabled ? Color.LightGray : Color.White,
                 Dock = DockStyle.Bottom,
                 Height = 40,
-                Cursor = Cursors.Hand,
-                BackColor = Color.LightGray, // Button background color
-                FlatStyle = FlatStyle.Flat,
-                ForeColor = Color.Black // Consistent text color
+                Cursor = isDisabled ? Cursors.Default : Cursors.Hand,
+                BackColor = isDisabled ? Color.DarkGray : Color.IndianRed,
+                Enabled = !isDisabled // Disable button for completed memberships
             };
-
-            // Explicitly remove all border styling
-            signUpButton.FlatAppearance.BorderSize = 0;
-            signUpButton.FlatAppearance.MouseDownBackColor = Color.LightGray; // Match background
-            signUpButton.FlatAppearance.MouseOverBackColor = Color.DarkGray; // Slight hover effect
 
             signUpButton.Click += (sender, e) =>
             {
-                MessageBox.Show($"You have selected the {name} membership.", "Membership Selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using (PaymentDialog paymentDialog = new PaymentDialog(membershipId, userId))
+                {
+                    if (paymentDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        // After payment, reload the panel with disabled status
+                        LoadMemberships(userId);
+                    }
+                }
             };
 
-            // Add controls to the panel
             panel.Controls.Add(signUpButton);
             panel.Controls.Add(benefitsLabel);
             panel.Controls.Add(feeLabel);
@@ -180,6 +181,7 @@ namespace togetherCulture
 
             return panel;
         }
+
 
 
         private string FormatBenefits(string benefits)

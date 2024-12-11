@@ -117,15 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="labelHealthDescription.Text" xml:space="preserve">
-    <value>Participation in Together Culture Democracy
-
-Access to 5 Fitzroy Street during our opening hours
-
-Free or discounted access to our activities
-
-A digital copy of our Living Book
-
-A Together Culture badge</value>
-  </data>
 </root>

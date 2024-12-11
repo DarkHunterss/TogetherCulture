@@ -43,9 +43,8 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.upgradeBtn = new System.Windows.Forms.Button();
-            this.logoutBtn = new FontAwesome.Sharp.IconButton();
-            this.notificationBtn = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userImg)).BeginInit();
             this.flowLayoutPanel7.SuspendLayout();
@@ -80,7 +79,7 @@
             // 
             // usernameLbl
             // 
-            this.usernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLbl.Location = new System.Drawing.Point(168, 115);
             this.usernameLbl.Name = "usernameLbl";
             this.usernameLbl.Size = new System.Drawing.Size(472, 24);
@@ -91,10 +90,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(499, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 24);
+            this.label2.Size = new System.Drawing.Size(138, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Welcome back,";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -113,12 +112,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(13, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 20);
+            this.label6.Size = new System.Drawing.Size(118, 21);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Activity Chart";
+            this.label6.Text = "Activity Details";
             // 
             // flowLayoutPanel6
             // 
@@ -134,10 +133,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(13, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 20);
+            this.label5.Size = new System.Drawing.Size(143, 21);
             this.label5.TabIndex = 5;
             this.label5.Text = "Benefits Overview";
             // 
@@ -155,10 +154,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(13, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 20);
+            this.label4.Size = new System.Drawing.Size(112, 21);
             this.label4.TabIndex = 4;
             this.label4.Text = "My Intensions";
             // 
@@ -176,10 +175,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(13, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 20);
+            this.label3.Size = new System.Drawing.Size(101, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "My Interests";
             // 
@@ -197,10 +196,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(13, 10);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(140, 20);
+            this.label7.Size = new System.Drawing.Size(140, 21);
             this.label7.TabIndex = 6;
             this.label7.Text = "Suggested Events";
             // 
@@ -208,58 +207,50 @@
             // 
             this.upgradeBtn.BackColor = System.Drawing.Color.IndianRed;
             this.upgradeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.upgradeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upgradeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.upgradeBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upgradeBtn.ForeColor = System.Drawing.Color.White;
             this.upgradeBtn.Location = new System.Drawing.Point(676, 0);
-            this.upgradeBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.upgradeBtn.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.upgradeBtn.Name = "upgradeBtn";
-            this.upgradeBtn.Size = new System.Drawing.Size(203, 44);
+            this.upgradeBtn.Size = new System.Drawing.Size(193, 44);
             this.upgradeBtn.TabIndex = 33;
             this.upgradeBtn.Text = "Upgrade";
             this.upgradeBtn.UseVisualStyleBackColor = false;
             this.upgradeBtn.Click += new System.EventHandler(this.upgradeBtn_Click);
             // 
-            // logoutBtn
-            // 
-            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutBtn.IconChar = FontAwesome.Sharp.IconChar.O;
-            this.logoutBtn.IconColor = System.Drawing.Color.Black;
-            this.logoutBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.logoutBtn.IconSize = 30;
-            this.logoutBtn.Location = new System.Drawing.Point(949, 0);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(44, 44);
-            this.logoutBtn.TabIndex = 32;
-            this.logoutBtn.UseVisualStyleBackColor = true;
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
-            // 
-            // notificationBtn
-            // 
-            this.notificationBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.notificationBtn.IconChar = FontAwesome.Sharp.IconChar.Bell;
-            this.notificationBtn.IconColor = System.Drawing.Color.Black;
-            this.notificationBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.notificationBtn.IconSize = 30;
-            this.notificationBtn.Location = new System.Drawing.Point(892, 0);
-            this.notificationBtn.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.notificationBtn.Name = "notificationBtn";
-            this.notificationBtn.Size = new System.Drawing.Size(44, 44);
-            this.notificationBtn.TabIndex = 31;
-            this.notificationBtn.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(-3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 29);
+            this.label1.Size = new System.Drawing.Size(138, 32);
             this.label1.TabIndex = 30;
             this.label1.Text = "Dashboard";
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackColor = System.Drawing.Color.DarkGray;
+            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.ForeColor = System.Drawing.Color.White;
+            this.logoutBtn.Location = new System.Drawing.Point(879, 0);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.logoutBtn.Size = new System.Drawing.Size(114, 44);
+            this.logoutBtn.TabIndex = 40;
+            this.logoutBtn.Text = "Log out";
+            this.logoutBtn.UseVisualStyleBackColor = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // DashboardScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel7);
             this.Controls.Add(this.flowLayoutPanel6);
@@ -267,8 +258,6 @@
             this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.upgradeBtn);
-            this.Controls.Add(this.logoutBtn);
-            this.Controls.Add(this.notificationBtn);
             this.Controls.Add(this.label1);
             this.Name = "DashboardScreen";
             this.Size = new System.Drawing.Size(991, 649);
@@ -304,11 +293,10 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button upgradeBtn;
-        private FontAwesome.Sharp.IconButton logoutBtn;
-        private FontAwesome.Sharp.IconButton notificationBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label usernameLbl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox userImg;
+        private System.Windows.Forms.Button logoutBtn;
     }
 }

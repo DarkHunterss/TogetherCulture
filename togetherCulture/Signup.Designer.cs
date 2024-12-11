@@ -49,31 +49,31 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(32, 112);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 20, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 26);
+            this.label3.Size = new System.Drawing.Size(58, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Email";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(48, 310);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(49, 326);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(274, 25);
+            this.label5.Size = new System.Drawing.Size(253, 30);
             this.label5.TabIndex = 21;
             this.label5.Text = "Lets make this circle bigger";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(47, 220);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 66);
+            this.label4.Size = new System.Drawing.Size(182, 80);
             this.label4.TabIndex = 20;
             this.label4.Text = "Sign up to \nyour account";
             // 
@@ -97,50 +97,52 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(32, 30);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 26);
+            this.label6.Size = new System.Drawing.Size(97, 25);
             this.label6.TabIndex = 9;
             this.label6.Text = "Username";
             // 
             // usernameTxtBox
             // 
-            this.usernameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTxtBox.Location = new System.Drawing.Point(32, 58);
+            this.usernameTxtBox.BackColor = System.Drawing.Color.White;
+            this.usernameTxtBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameTxtBox.Location = new System.Drawing.Point(32, 57);
             this.usernameTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.usernameTxtBox.Name = "usernameTxtBox";
-            this.usernameTxtBox.Size = new System.Drawing.Size(396, 32);
+            this.usernameTxtBox.Size = new System.Drawing.Size(396, 33);
             this.usernameTxtBox.TabIndex = 11;
             // 
             // emailTxtBox
             // 
-            this.emailTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTxtBox.Location = new System.Drawing.Point(32, 140);
+            this.emailTxtBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTxtBox.Location = new System.Drawing.Point(32, 139);
             this.emailTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.emailTxtBox.Name = "emailTxtBox";
-            this.emailTxtBox.Size = new System.Drawing.Size(396, 32);
+            this.emailTxtBox.Size = new System.Drawing.Size(396, 33);
             this.emailTxtBox.TabIndex = 14;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(32, 194);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 20, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 26);
+            this.label7.Size = new System.Drawing.Size(91, 25);
             this.label7.TabIndex = 10;
             this.label7.Text = "Password";
             // 
             // passwordTxtBox
             // 
-            this.passwordTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTxtBox.Location = new System.Drawing.Point(32, 222);
+            this.passwordTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.passwordTxtBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTxtBox.Location = new System.Drawing.Point(32, 221);
             this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.passwordTxtBox.Name = "passwordTxtBox";
-            this.passwordTxtBox.Size = new System.Drawing.Size(396, 32);
+            this.passwordTxtBox.Size = new System.Drawing.Size(396, 33);
             this.passwordTxtBox.TabIndex = 15;
             // 
             // flowLayoutPanel2
@@ -156,26 +158,28 @@
             // 
             // singupBtn
             // 
+            this.singupBtn.BackColor = System.Drawing.Color.DarkGray;
             this.singupBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.singupBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.singupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.singupBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.singupBtn.Location = new System.Drawing.Point(273, 50);
             this.singupBtn.Margin = new System.Windows.Forms.Padding(25, 50, 3, 3);
             this.singupBtn.Name = "singupBtn";
             this.singupBtn.Size = new System.Drawing.Size(119, 36);
             this.singupBtn.TabIndex = 22;
             this.singupBtn.Text = "sign up";
-            this.singupBtn.UseVisualStyleBackColor = true;
+            this.singupBtn.UseVisualStyleBackColor = false;
             this.singupBtn.Click += new System.EventHandler(this.signupBtn_Click);
             // 
             // redirectLoginBtn
             // 
             this.redirectLoginBtn.AutoSize = true;
             this.redirectLoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.redirectLoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.redirectLoginBtn.Location = new System.Drawing.Point(194, 65);
+            this.redirectLoginBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.redirectLoginBtn.Location = new System.Drawing.Point(193, 65);
             this.redirectLoginBtn.Margin = new System.Windows.Forms.Padding(0, 65, 2, 0);
             this.redirectLoginBtn.Name = "redirectLoginBtn";
-            this.redirectLoginBtn.Size = new System.Drawing.Size(52, 20);
+            this.redirectLoginBtn.Size = new System.Drawing.Size(53, 21);
             this.redirectLoginBtn.TabIndex = 14;
             this.redirectLoginBtn.Text = "Log in";
             this.redirectLoginBtn.Click += new System.EventHandler(this.redirectLoginBtn_Click);
@@ -184,22 +188,22 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(2, 65);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(7, 65);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 65, 0, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(192, 20);
+            this.label8.Size = new System.Drawing.Size(186, 21);
             this.label8.TabIndex = 18;
             this.label8.Text = "Already have an account?";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(43, 100);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(401, 55);
+            this.label9.Size = new System.Drawing.Size(409, 65);
             this.label9.TabIndex = 18;
             this.label9.Text = "Together Culture";
             // 
@@ -232,13 +236,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox usernameTxtBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label redirectLoginBtn;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox emailTxtBox;
         private System.Windows.Forms.TextBox passwordTxtBox;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button singupBtn;
+        private System.Windows.Forms.Label redirectLoginBtn;
+        private System.Windows.Forms.Label label8;
     }
 }
 

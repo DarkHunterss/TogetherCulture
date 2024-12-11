@@ -61,7 +61,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.contactUsBtn);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Location = new System.Drawing.Point(14, 488);
@@ -73,12 +73,14 @@
             // 
             // contactUsBtn
             // 
-            this.contactUsBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.contactUsBtn.BackColor = System.Drawing.Color.DarkGray;
             this.contactUsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.contactUsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactUsBtn.Location = new System.Drawing.Point(13, 83);
+            this.contactUsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contactUsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactUsBtn.ForeColor = System.Drawing.Color.White;
+            this.contactUsBtn.Location = new System.Drawing.Point(32, 96);
             this.contactUsBtn.Name = "contactUsBtn";
-            this.contactUsBtn.Size = new System.Drawing.Size(162, 41);
+            this.contactUsBtn.Size = new System.Drawing.Size(121, 38);
             this.contactUsBtn.TabIndex = 9;
             this.contactUsBtn.Text = "Contact us";
             this.contactUsBtn.UseVisualStyleBackColor = false;
@@ -114,7 +116,7 @@
             this.dashboardLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dashboardLbl.BackColor = System.Drawing.Color.Transparent;
             this.dashboardLbl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dashboardLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboardLbl.Location = new System.Drawing.Point(3, 0);
             this.dashboardLbl.Name = "dashboardLbl";
             this.dashboardLbl.Padding = new System.Windows.Forms.Padding(5);
@@ -129,11 +131,11 @@
             this.connectionBoardLbl.BackColor = System.Drawing.Color.Transparent;
             this.connectionBoardLbl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.connectionBoardLbl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.connectionBoardLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.connectionBoardLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.connectionBoardLbl.Location = new System.Drawing.Point(3, 33);
             this.connectionBoardLbl.Name = "connectionBoardLbl";
             this.connectionBoardLbl.Padding = new System.Windows.Forms.Padding(5);
-            this.connectionBoardLbl.Size = new System.Drawing.Size(191, 34);
+            this.connectionBoardLbl.Size = new System.Drawing.Size(191, 31);
             this.connectionBoardLbl.TabIndex = 2;
             this.connectionBoardLbl.Text = "Connection board";
             this.connectionBoardLbl.Click += new System.EventHandler(this.ConnectionBoardLbl_Click);
@@ -144,11 +146,11 @@
             this.documentLbl.BackColor = System.Drawing.Color.Transparent;
             this.documentLbl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.documentLbl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.documentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.documentLbl.Location = new System.Drawing.Point(3, 67);
+            this.documentLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.documentLbl.Location = new System.Drawing.Point(3, 64);
             this.documentLbl.Name = "documentLbl";
             this.documentLbl.Padding = new System.Windows.Forms.Padding(5);
-            this.documentLbl.Size = new System.Drawing.Size(191, 34);
+            this.documentLbl.Size = new System.Drawing.Size(191, 31);
             this.documentLbl.TabIndex = 3;
             this.documentLbl.Text = "Documents";
             this.documentLbl.Click += new System.EventHandler(this.documentLbl_Click);
@@ -159,11 +161,11 @@
             this.digitalContentLbl.BackColor = System.Drawing.Color.Transparent;
             this.digitalContentLbl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.digitalContentLbl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.digitalContentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.digitalContentLbl.Location = new System.Drawing.Point(3, 101);
+            this.digitalContentLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.digitalContentLbl.Location = new System.Drawing.Point(3, 95);
             this.digitalContentLbl.Name = "digitalContentLbl";
             this.digitalContentLbl.Padding = new System.Windows.Forms.Padding(5);
-            this.digitalContentLbl.Size = new System.Drawing.Size(191, 34);
+            this.digitalContentLbl.Size = new System.Drawing.Size(191, 31);
             this.digitalContentLbl.TabIndex = 4;
             this.digitalContentLbl.Text = "Digital content";
             this.digitalContentLbl.Click += new System.EventHandler(this.digitalContentLbl_Click);
@@ -174,11 +176,11 @@
             this.membersLbl.BackColor = System.Drawing.Color.Transparent;
             this.membersLbl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.membersLbl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.membersLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.membersLbl.Location = new System.Drawing.Point(3, 135);
+            this.membersLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.membersLbl.Location = new System.Drawing.Point(3, 126);
             this.membersLbl.Name = "membersLbl";
             this.membersLbl.Padding = new System.Windows.Forms.Padding(5);
-            this.membersLbl.Size = new System.Drawing.Size(191, 34);
+            this.membersLbl.Size = new System.Drawing.Size(191, 31);
             this.membersLbl.TabIndex = 5;
             this.membersLbl.Text = "Members";
             this.membersLbl.Click += new System.EventHandler(this.membersLbl_Click);
@@ -189,11 +191,11 @@
             this.eventsLbl.BackColor = System.Drawing.Color.Transparent;
             this.eventsLbl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eventsLbl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.eventsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eventsLbl.Location = new System.Drawing.Point(3, 169);
+            this.eventsLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eventsLbl.Location = new System.Drawing.Point(3, 157);
             this.eventsLbl.Name = "eventsLbl";
             this.eventsLbl.Padding = new System.Windows.Forms.Padding(5);
-            this.eventsLbl.Size = new System.Drawing.Size(191, 34);
+            this.eventsLbl.Size = new System.Drawing.Size(191, 31);
             this.eventsLbl.TabIndex = 6;
             this.eventsLbl.Text = "Events";
             this.eventsLbl.Click += new System.EventHandler(this.eventsLbl_Click);
@@ -201,11 +203,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.IndianRed;
             this.label2.Location = new System.Drawing.Point(15, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 62);
+            this.label2.Size = new System.Drawing.Size(140, 74);
             this.label2.TabIndex = 0;
             this.label2.Text = "Together \nculture";
             // 

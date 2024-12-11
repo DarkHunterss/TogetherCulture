@@ -2,15 +2,8 @@
 {
     partial class MembersScreen
     {
-        /// <summary> 
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,24 +13,11 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
-
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.mainPnl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.usersPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
-            // 
-            // mainPnl
-            // 
-            this.mainPnl.Location = new System.Drawing.Point(0, 49);
-            this.mainPnl.Name = "mainPnl";
-            this.mainPnl.Size = new System.Drawing.Size(1006, 589);
-            this.mainPnl.TabIndex = 44;
             // 
             // label1
             // 
@@ -46,25 +26,29 @@
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 32);
-            this.label1.TabIndex = 43;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Members";
+            // 
+            // usersPanel
+            // 
+            this.usersPanel.AutoScroll = true;
+            this.usersPanel.Location = new System.Drawing.Point(0, 50);
+            this.usersPanel.Name = "usersPanel";
+            this.usersPanel.Size = new System.Drawing.Size(991, 600);
+            this.usersPanel.TabIndex = 1;
             // 
             // MembersScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.mainPnl);
+            this.Controls.Add(this.usersPanel);
             this.Controls.Add(this.label1);
             this.Name = "MembersScreen";
-            this.Size = new System.Drawing.Size(1006, 638);
+            this.Size = new System.Drawing.Size(991, 649);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel mainPnl;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel usersPanel;
     }
 }

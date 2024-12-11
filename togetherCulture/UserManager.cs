@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
+using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace togetherCulture
@@ -48,40 +49,43 @@ namespace togetherCulture
         {
             try
             {
-                // First query: Fetch the user ID
-                string idQuery = "SELECT ID FROM users WHERE Username = @Username";
-                SqlParameter[] idParams = { new SqlParameter("@Username", username) };
-                object idResult = _dbConnection.executeScalar(idQuery, idParams);
+                // Query to fetch user details with role name
+                string query = @"
+                    SELECT u.ID, u.Password, r.Name
+                    FROM users u
+                    INNER JOIN role r ON u.RoleID = r.ID
+                    WHERE u.Username = @Username";
+                SqlParameter[] parameters = { new SqlParameter("@Username", username) };
+                DataTable userTable = _dbConnection.executeQuery(query, parameters);
 
-                if (idResult != null)
+                if (userTable.Rows.Count > 0)
                 {
-                    int userId = Convert.ToInt32(idResult); // Convert to int since ID is an integer
+                    // Extract user details
+                    DataRow userRow = userTable.Rows[0];
+                    int userId = Convert.ToInt32(userRow["ID"]);
+                    string storedHash = userRow["Password"].ToString();
+                    string role = userRow["Name"].ToString();
 
-                    // Second query: Fetch the stored password
-                    string passwordQuery = "SELECT Password FROM users WHERE ID = @UserID";
-                    SqlParameter[] passwordParams = { new SqlParameter("@UserID", userId) };
-                    object passwordResult = _dbConnection.executeScalar(passwordQuery, passwordParams);
+                    // Hash the entered password for comparison
+                    string enteredHash = HashPassword(password);
 
-                    if (passwordResult != null)
+                    if (storedHash == enteredHash)
                     {
-                        string storedHash = passwordResult.ToString();
-                        string enteredHash = HashPassword(password);
+                        // Store user details in global variables
+                        Globals.CurrentLoggedInUsername = username;
+                        Globals.CurrentLoggedInUserID = userId;
+                        Globals.CurrentLoggedInUserRole = role;
 
-                        if (storedHash == enteredHash)
-                        {
-                            // Store the user details in global variables
-                            Globals.CurrentLoggedInUsername = username;
-                            Globals.CurrentLoggedInUserID = userId;
-
-                            return true;
-                        }
+                        return true; // Successful login
                     }
                 }
 
-                return false; // User not found or password mismatch
+                // User not found or password mismatch
+                return false;
             }
             catch (Exception ex)
             {
+                // Log error for debugging and security auditing
                 Console.WriteLine($"Login Error: {ex.Message}");
                 return false;
             }
@@ -89,12 +93,34 @@ namespace togetherCulture
 
 
 
-
-
         // Method to Log Out a User
         public void Logout()
         {
             Globals.CurrentLoggedInUsername = "";
+        }
+
+        public void UpdateUserRoleToMember(int userId)
+        {
+            try
+            {
+                string query = @"
+                    UPDATE users
+                    SET RoleID = (SELECT ID FROM role WHERE Name = 'Member')
+                    WHERE ID = @UserId";
+
+                SqlParameter[] parameters = {
+                    new SqlParameter("@UserId", userId)
+                };
+
+                DBConnection.getConnectionInstance().executeNonQuery(query, parameters);
+
+                // Optionally, update the global role variable
+                Globals.CurrentLoggedInUserRole = "Member";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating user role: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // Method to Delete a User

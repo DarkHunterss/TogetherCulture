@@ -28,16 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mainPnl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.createEventBtn = new System.Windows.Forms.Button();
+            this.eventPnl = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // mainPnl
-            // 
-            this.mainPnl.Location = new System.Drawing.Point(0, 49);
-            this.mainPnl.Name = "mainPnl";
-            this.mainPnl.Size = new System.Drawing.Size(1006, 589);
-            this.mainPnl.TabIndex = 44;
             // 
             // label1
             // 
@@ -49,11 +43,35 @@
             this.label1.TabIndex = 43;
             this.label1.Text = "Events";
             // 
+            // createEventBtn
+            // 
+            this.createEventBtn.BackColor = System.Drawing.Color.IndianRed;
+            this.createEventBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.createEventBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createEventBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createEventBtn.ForeColor = System.Drawing.Color.White;
+            this.createEventBtn.Location = new System.Drawing.Point(815, 0);
+            this.createEventBtn.Margin = new System.Windows.Forms.Padding(0, 0, 10, 5);
+            this.createEventBtn.Name = "createEventBtn";
+            this.createEventBtn.Size = new System.Drawing.Size(167, 46);
+            this.createEventBtn.TabIndex = 45;
+            this.createEventBtn.Text = "Create event";
+            this.createEventBtn.UseVisualStyleBackColor = false;
+            this.createEventBtn.Click += new System.EventHandler(this.createEventBtn_Click);
+            // 
+            // eventPnl
+            // 
+            this.eventPnl.Location = new System.Drawing.Point(0, 54);
+            this.eventPnl.Name = "eventPnl";
+            this.eventPnl.Size = new System.Drawing.Size(1006, 584);
+            this.eventPnl.TabIndex = 46;
+            // 
             // EventsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.mainPnl);
+            this.Controls.Add(this.eventPnl);
+            this.Controls.Add(this.createEventBtn);
             this.Controls.Add(this.label1);
             this.Name = "EventsScreen";
             this.Size = new System.Drawing.Size(1006, 638);
@@ -63,8 +81,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel mainPnl;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button createEventBtn;
+        private System.Windows.Forms.Panel eventPnl;
     }
 }

@@ -72,6 +72,12 @@
     <Compile Include="ContactUsDialog.Designer.cs">
       <DependentUpon>ContactUsDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateEventDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateEventDialog.Designer.cs">
+      <DependentUpon>CreateEventDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashboardScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ContactUsDialog.resx">
       <DependentUpon>ContactUsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateEventDialog.resx">
+      <DependentUpon>CreateEventDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardScreen.resx">
       <DependentUpon>DashboardScreen.cs</DependentUpon>

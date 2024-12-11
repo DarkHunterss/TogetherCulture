@@ -164,19 +164,22 @@ namespace togetherCulture
 
         private void addBtn_Click(object sender, EventArgs e)
         {
+            if (Globals.CurrentLoggedInUserRole == "User") // Assuming "User" is the role for normal users
+            {
+                MessageBox.Show("You cannot add connections. Buy a Membership first.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Open the AddConnectionDialog for privileged users
             using (AddConnectionDialog addForm = new AddConnectionDialog(Globals.CurrentLoggedInUserID))
             {
                 if (addForm.ShowDialog() == DialogResult.OK)
                 {
                     // Refresh the current view (requests/offers) after adding
                     if (requestsBtn.BackColor == Color.IndianRed)
-                    {
                         LoadRequests();
-                    }
-                    else if (offersBtn.BackColor == Color.IndianRed)
-                    {
+                    else
                         LoadOffers();
-                    }
                 }
             }
         }

@@ -11,7 +11,7 @@ namespace togetherCulture
 
         public static int CurrentLoggedInUserID { get; set; } = 0;
         public static string CurrentLoggedInUsername { get; set; } = "";
-
+        public static string CurrentLoggedInUserRole { get; set; } = "";
 
         public static string ConnectionString { get; set; }
 

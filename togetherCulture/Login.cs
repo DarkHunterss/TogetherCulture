@@ -24,6 +24,12 @@ namespace togetherCulture
 
             // Show screen in the center
             StartPosition = FormStartPosition.CenterScreen;
+
+   
+            // Enable KeyPreview for the form
+            this.KeyPreview = true;
+
+            this.KeyDown += Login_KeyDown;
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -47,8 +53,6 @@ namespace togetherCulture
 
                 if (isLoggedIn)
                 {
-                    ShowDialogMessage("Login successful!", "Success");
-
                     // update user last visit date info every time login is successful
                     userManager.UpdateLastVisitInfo();
 
@@ -67,6 +71,15 @@ namespace togetherCulture
             }
         }
 
+        private void Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                loginBtn_Click(sender,e);
+                e.SuppressKeyPress = true;
+            }
+        }
+
         private void redirectSignupBtn_Click(object sender, EventArgs e)
         {
             Signup signup = new Signup();
@@ -74,5 +87,9 @@ namespace togetherCulture
             Hide();
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

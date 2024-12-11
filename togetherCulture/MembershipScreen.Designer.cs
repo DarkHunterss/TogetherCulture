@@ -21,6 +21,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.backMembershipBtn = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -52,6 +54,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.IndianRed;
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Location = new System.Drawing.Point(25, 56);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(946, 5);
@@ -72,6 +75,13 @@
             this.backMembershipBtn.UseVisualStyleBackColor = false;
             this.backMembershipBtn.Click += new System.EventHandler(this.backMembershipBtn_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(707, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
             // MembershipScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -82,6 +92,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MembershipScreen";
             this.Size = new System.Drawing.Size(991, 649);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,5 +104,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button backMembershipBtn;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

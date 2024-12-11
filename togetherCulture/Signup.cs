@@ -25,6 +25,11 @@ namespace togetherCulture
 
             // Show screen in the center
             StartPosition = FormStartPosition.CenterScreen;
+
+            // Enable KeyPreview for the form
+            this.KeyPreview = true;
+
+            this.KeyDown += Signup_KeyDown;
         }
 
         private void signupBtn_Click(object sender, EventArgs e)
@@ -82,6 +87,16 @@ namespace togetherCulture
                 ShowDialogMessage($"An error occurred during sign-up: {ex.Message}", "Error");
             }
         }
+
+        private void Signup_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                signupBtn_Click(sender,e);
+                e.SuppressKeyPress = true;
+            }
+        }
+
 
         private void redirectLoginBtn_Click(object sender, EventArgs e)
         {

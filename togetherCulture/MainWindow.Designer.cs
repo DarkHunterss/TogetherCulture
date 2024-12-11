@@ -52,11 +52,11 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.sideMenuPanel);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(19, 12);
-            this.panel2.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.panel2.Location = new System.Drawing.Point(14, 14);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.panel2.Size = new System.Drawing.Size(216, 649);
+            this.panel2.Size = new System.Drawing.Size(221, 638);
             this.panel2.TabIndex = 8;
             // 
             // panel3
@@ -64,11 +64,11 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.contactUsBtn);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Location = new System.Drawing.Point(14, 488);
-            this.panel3.Margin = new System.Windows.Forms.Padding(10);
+            this.panel3.Location = new System.Drawing.Point(14, 469);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(20);
-            this.panel3.Size = new System.Drawing.Size(187, 147);
+            this.panel3.Size = new System.Drawing.Size(187, 160);
             this.panel3.TabIndex = 8;
             // 
             // contactUsBtn
@@ -78,9 +78,9 @@
             this.contactUsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.contactUsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactUsBtn.ForeColor = System.Drawing.Color.White;
-            this.contactUsBtn.Location = new System.Drawing.Point(32, 96);
+            this.contactUsBtn.Location = new System.Drawing.Point(23, 99);
             this.contactUsBtn.Name = "contactUsBtn";
-            this.contactUsBtn.Size = new System.Drawing.Size(121, 38);
+            this.contactUsBtn.Size = new System.Drawing.Size(141, 38);
             this.contactUsBtn.TabIndex = 9;
             this.contactUsBtn.Text = "Contact us";
             this.contactUsBtn.UseVisualStyleBackColor = false;
@@ -90,7 +90,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(9, 20);
+            this.label8.Location = new System.Drawing.Point(19, 20);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(122, 40);
             this.label8.TabIndex = 4;
@@ -108,7 +108,7 @@
             this.sideMenuPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.sideMenuPanel.Location = new System.Drawing.Point(14, 132);
             this.sideMenuPanel.Name = "sideMenuPanel";
-            this.sideMenuPanel.Size = new System.Drawing.Size(187, 343);
+            this.sideMenuPanel.Size = new System.Drawing.Size(187, 329);
             this.sideMenuPanel.TabIndex = 2;
             // 
             // dashboardLbl
@@ -213,9 +213,10 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.Location = new System.Drawing.Point(249, 13);
+            this.mainPanel.Location = new System.Drawing.Point(245, 14);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(5);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1004, 649);
+            this.mainPanel.Size = new System.Drawing.Size(1006, 638);
             this.mainPanel.TabIndex = 9;
             // 
             // MainWindow

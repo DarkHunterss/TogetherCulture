@@ -42,47 +42,59 @@ namespace togetherCulture
                 string membershipQueryAll = "SELECT ID, Name, Benefits, MonthlyFee FROM membership WHERE IsActive = 1";
                 DataTable membershipTable = DBConnection.getConnectionInstance().executeQuery(membershipQueryAll);
 
-                int recordCount = membershipTable.Rows.Count;
-
-                if (recordCount == 0)
+                if (membershipTable.Rows.Count == 0)
                 {
+                    // Create a Panel to hold the "No memberships available" message
+                    Panel noMembershipPanel = new Panel
+                    {
+                        Location = new Point(26, 81),
+                        Size = new Size(945, 555),
+                        BackColor = Color.White
+                    };
+
                     Label noMembershipLabel = new Label
                     {
-                        Text = "No memberships available.",
-                        Font = new Font("Segoe UI", 14F, FontStyle.Bold),
+                        Text = "No memberships available at the moment",
+                        Font = new Font("Segoe UI", 16F, FontStyle.Bold),
+                        ForeColor = Color.Gray,
                         TextAlign = ContentAlignment.MiddleCenter,
                         Dock = DockStyle.Fill
                     };
-                    tableLayoutPanel1.Controls.Add(noMembershipLabel, 0, 0);
-                    tableLayoutPanel1.ColumnCount = 1;
-                    tableLayoutPanel1.RowCount = 1;
+
+                    // Add the label to the panel
+                    noMembershipPanel.Controls.Add(noMembershipLabel);
+
+                    // Clear existing controls and add the panel to the main container
+                    Controls.Add(noMembershipPanel);
+                    noMembershipPanel.BringToFront();
+                    return;
                 }
-                else
+
+                // If memberships exist, process them
+                int column = 0;
+
+                foreach (DataRow row in membershipTable.Rows)
                 {
-                    int column = 0;
+                    int membershipId = Convert.ToInt32(row["ID"]);
+                    string name = row["Name"].ToString();
+                    string benefits = row["Benefits"].ToString();
+                    decimal monthlyFee = Convert.ToDecimal(row["MonthlyFee"]);
 
-                    foreach (DataRow row in membershipTable.Rows)
-                    {
-                        int membershipId = Convert.ToInt32(row["ID"]);
-                        string name = row["Name"].ToString();
-                        string benefits = row["Benefits"].ToString();
-                        decimal monthlyFee = Convert.ToDecimal(row["MonthlyFee"]);
+                    bool isDisabled = membershipId <= currentMembershipId;
 
-                        bool isDisabled = membershipId <= currentMembershipId;
-
-                        var membershipPanel = CreateMembershipPanel(name, benefits, monthlyFee, membershipId, userId, isDisabled);
-                        tableLayoutPanel1.Controls.Add(membershipPanel, column % 3, column / 3);
-                        column++;
-                    }
-
-                    AdjustTableLayout(recordCount);
+                    var membershipPanel = CreateMembershipPanel(name, benefits, monthlyFee, membershipId, userId, isDisabled);
+                    tableLayoutPanel1.Controls.Add(membershipPanel, column % 3, column / 3);
+                    column++;
                 }
+
+                AdjustTableLayout(membershipTable.Rows.Count);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading memberships: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
 

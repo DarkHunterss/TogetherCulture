@@ -21,8 +21,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.backMembershipBtn = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -44,7 +42,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(25, 100);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(33, 95);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -54,10 +52,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.IndianRed;
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(25, 56);
+            this.panel1.Location = new System.Drawing.Point(3, 56);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(946, 5);
+            this.panel1.Size = new System.Drawing.Size(1000, 5);
             this.panel1.TabIndex = 54;
             // 
             // backMembershipBtn
@@ -67,20 +64,13 @@
             this.backMembershipBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backMembershipBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backMembershipBtn.ForeColor = System.Drawing.Color.White;
-            this.backMembershipBtn.Location = new System.Drawing.Point(831, 9);
+            this.backMembershipBtn.Location = new System.Drawing.Point(863, 9);
             this.backMembershipBtn.Name = "backMembershipBtn";
             this.backMembershipBtn.Size = new System.Drawing.Size(140, 41);
             this.backMembershipBtn.TabIndex = 5;
             this.backMembershipBtn.Text = "Back";
             this.backMembershipBtn.UseVisualStyleBackColor = false;
             this.backMembershipBtn.Click += new System.EventHandler(this.backMembershipBtn_Click);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(707, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // MembershipScreen
             // 
@@ -91,8 +81,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "MembershipScreen";
-            this.Size = new System.Drawing.Size(991, 649);
-            this.panel1.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(1006, 638);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,6 +93,5 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button backMembershipBtn;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

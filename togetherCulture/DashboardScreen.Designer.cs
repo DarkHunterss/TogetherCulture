@@ -47,11 +47,11 @@
             this.intentionDataPnl = new System.Windows.Forms.FlowLayoutPanel();
             this.intensionsPnl = new System.Windows.Forms.Label();
             this.eventsPnl = new System.Windows.Forms.Panel();
-            this.benefitsPnl = new System.Windows.Forms.Panel();
-            this.activityPnl = new System.Windows.Forms.Panel();
-            this.benefitsDataPnl = new System.Windows.Forms.FlowLayoutPanel();
-            this.activityDataPnl = new System.Windows.Forms.FlowLayoutPanel();
             this.eventsDataPnl = new System.Windows.Forms.FlowLayoutPanel();
+            this.benefitsPnl = new System.Windows.Forms.Panel();
+            this.benefitsDataPnl = new System.Windows.Forms.FlowLayoutPanel();
+            this.activityPnl = new System.Windows.Forms.Panel();
+            this.activityDataPnl = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userImg)).BeginInit();
             this.panel2.SuspendLayout();
@@ -69,11 +69,11 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.usernameLbl);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(-7, 49);
+            this.panel1.Location = new System.Drawing.Point(-1, 49);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(673, 171);
+            this.panel1.Size = new System.Drawing.Size(667, 171);
             this.panel1.TabIndex = 39;
             // 
             // userImg
@@ -90,9 +90,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.IndianRed;
             this.panel2.Controls.Add(this.flowLayoutPanel1);
-            this.panel2.Location = new System.Drawing.Point(7, 166);
+            this.panel2.Location = new System.Drawing.Point(1, 166);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(666, 5);
+            this.panel2.Size = new System.Drawing.Size(667, 5);
             this.panel2.TabIndex = 55;
             // 
             // flowLayoutPanel1
@@ -178,11 +178,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-3, 0);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 32);
             this.label1.TabIndex = 30;
             this.label1.Text = "Dashboard";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // logoutBtn
             // 
@@ -259,6 +260,13 @@
             this.eventsPnl.Size = new System.Drawing.Size(332, 361);
             this.eventsPnl.TabIndex = 58;
             // 
+            // eventsDataPnl
+            // 
+            this.eventsDataPnl.Location = new System.Drawing.Point(12, 34);
+            this.eventsDataPnl.Name = "eventsDataPnl";
+            this.eventsDataPnl.Size = new System.Drawing.Size(307, 314);
+            this.eventsDataPnl.TabIndex = 8;
+            // 
             // benefitsPnl
             // 
             this.benefitsPnl.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -269,6 +277,13 @@
             this.benefitsPnl.Name = "benefitsPnl";
             this.benefitsPnl.Size = new System.Drawing.Size(666, 218);
             this.benefitsPnl.TabIndex = 58;
+            // 
+            // benefitsDataPnl
+            // 
+            this.benefitsDataPnl.Location = new System.Drawing.Point(10, 33);
+            this.benefitsDataPnl.Name = "benefitsDataPnl";
+            this.benefitsDataPnl.Size = new System.Drawing.Size(643, 173);
+            this.benefitsDataPnl.TabIndex = 7;
             // 
             // activityPnl
             // 
@@ -281,26 +296,12 @@
             this.activityPnl.Size = new System.Drawing.Size(332, 218);
             this.activityPnl.TabIndex = 59;
             // 
-            // benefitsDataPnl
-            // 
-            this.benefitsDataPnl.Location = new System.Drawing.Point(10, 33);
-            this.benefitsDataPnl.Name = "benefitsDataPnl";
-            this.benefitsDataPnl.Size = new System.Drawing.Size(643, 173);
-            this.benefitsDataPnl.TabIndex = 7;
-            // 
             // activityDataPnl
             // 
             this.activityDataPnl.Location = new System.Drawing.Point(12, 33);
             this.activityDataPnl.Name = "activityDataPnl";
             this.activityDataPnl.Size = new System.Drawing.Size(307, 173);
             this.activityDataPnl.TabIndex = 7;
-            // 
-            // eventsDataPnl
-            // 
-            this.eventsDataPnl.Location = new System.Drawing.Point(12, 34);
-            this.eventsDataPnl.Name = "eventsDataPnl";
-            this.eventsDataPnl.Size = new System.Drawing.Size(307, 314);
-            this.eventsDataPnl.TabIndex = 8;
             // 
             // DashboardScreen
             // 

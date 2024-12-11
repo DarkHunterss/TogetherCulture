@@ -54,6 +54,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddConnectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddConnectionDialog.Designer.cs">
+      <DependentUpon>AddConnectionDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionBoardScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,6 +151,9 @@
       <DependentUpon>UserPreferenceScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="AddConnectionDialog.resx">
+      <DependentUpon>AddConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConnectionBoardScreen.resx">
       <DependentUpon>ConnectionBoardScreen.cs</DependentUpon>
     </EmbeddedResource>

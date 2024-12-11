@@ -34,3 +34,4 @@ C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCul
 C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.MembershipScreen.resources
 C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.PaymentDialog.resources
 C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.UserPreferenceScreen.resources
+C:\Users\ap1617\AppData\Local\Development\projectNew\togetherCulture\togetherCulture\obj\Debug\togetherCulture.AddConnectionDialog.resources

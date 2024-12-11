@@ -13,6 +13,7 @@ namespace togetherCulture
         private int _userId;
         private decimal _paymentAmount; // Changed type to decimal for proper calculation
 
+
         public PaymentDialog(int membershipId, int userId)
         {
             InitializeComponent();
@@ -114,6 +115,9 @@ namespace togetherCulture
 
                     DBConnection.getConnectionInstance().executeNonQuery(insertPaymentQuery, paymentParams);
 
+                    // Refresh the benefits overview when the payment is completed
+                    //LoadBenefitsOverview();
+
                     // Notify user
                     ShowDialogMessage("Payment successful! Membership updated.", "Success");
                     this.DialogResult = DialogResult.OK;
@@ -135,5 +139,7 @@ namespace togetherCulture
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
+
+
     }
 }

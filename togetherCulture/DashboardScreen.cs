@@ -177,7 +177,7 @@ namespace togetherCulture
             }
         }
 
-        private void LoadBenefitsOverview()
+        public void LoadBenefitsOverview()
         {
             try
             {
@@ -288,6 +288,11 @@ namespace togetherCulture
         private void upgradeBtn_Click(object sender, EventArgs e)
         {
             _mainWindow.upgradeBtn_Click();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

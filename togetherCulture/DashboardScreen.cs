@@ -213,7 +213,7 @@ namespace togetherCulture
                     // No membership, display a message
                     Label noBenefitsLabel = new Label
                     {
-                        Text = "No benefits are applied.",
+                        Text = "No benefits are applied yet. Buy a membership for amazing features.",
                         Font = new System.Drawing.Font("Segoe UI", 10F),
                         AutoSize = true,
                         ForeColor = System.Drawing.Color.Gray,

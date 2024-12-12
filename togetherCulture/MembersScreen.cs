@@ -62,7 +62,7 @@ namespace togetherCulture
         {
             Panel userPanel = new Panel
             {
-                BackColor = Color.LightGray,
+                BackColor = Color.White,
                 Size = new Size(970, 100),
                 Margin = new Padding(5),
                 Padding = new Padding(10)

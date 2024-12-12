@@ -19,9 +19,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.mainPnl = new System.Windows.Forms.Panel();
-            this.requestsBtn = new System.Windows.Forms.Button();
-            this.offersBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
+            this.offersBtn = new System.Windows.Forms.Button();
+            this.requestsBtn = new System.Windows.Forms.Button();
             this.contentPnl = new System.Windows.Forms.FlowLayoutPanel();
             this.mainPnl.SuspendLayout();
             this.SuspendLayout();
@@ -47,20 +47,20 @@
             this.mainPnl.Size = new System.Drawing.Size(1006, 589);
             this.mainPnl.TabIndex = 42;
             // 
-            // requestsBtn
+            // addBtn
             // 
-            this.requestsBtn.BackColor = System.Drawing.Color.IndianRed;
-            this.requestsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.requestsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.requestsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.requestsBtn.ForeColor = System.Drawing.Color.White;
-            this.requestsBtn.Location = new System.Drawing.Point(0, 3);
-            this.requestsBtn.Name = "requestsBtn";
-            this.requestsBtn.Size = new System.Drawing.Size(186, 40);
-            this.requestsBtn.TabIndex = 0;
-            this.requestsBtn.Text = "Requests";
-            this.requestsBtn.UseVisualStyleBackColor = false;
-            this.requestsBtn.Click += new System.EventHandler(this.requestsBtn_Click);
+            this.addBtn.BackColor = System.Drawing.Color.Gray;
+            this.addBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.ForeColor = System.Drawing.Color.White;
+            this.addBtn.Location = new System.Drawing.Point(886, 0);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(95, 40);
+            this.addBtn.TabIndex = 2;
+            this.addBtn.Text = "+";
+            this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // offersBtn
             // 
@@ -69,7 +69,7 @@
             this.offersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.offersBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.offersBtn.ForeColor = System.Drawing.Color.White;
-            this.offersBtn.Location = new System.Drawing.Point(192, 3);
+            this.offersBtn.Location = new System.Drawing.Point(192, 0);
             this.offersBtn.Name = "offersBtn";
             this.offersBtn.Size = new System.Drawing.Size(183, 40);
             this.offersBtn.TabIndex = 1;
@@ -77,20 +77,20 @@
             this.offersBtn.UseVisualStyleBackColor = false;
             this.offersBtn.Click += new System.EventHandler(this.offersBtn_Click);
             // 
-            // addBtn
+            // requestsBtn
             // 
-            this.addBtn.BackColor = System.Drawing.Color.Gray;
-            this.addBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addBtn.ForeColor = System.Drawing.Color.White;
-            this.addBtn.Location = new System.Drawing.Point(911, 3);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(95, 40);
-            this.addBtn.TabIndex = 2;
-            this.addBtn.Text = "+";
-            this.addBtn.UseVisualStyleBackColor = false;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            this.requestsBtn.BackColor = System.Drawing.Color.IndianRed;
+            this.requestsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.requestsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.requestsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.requestsBtn.ForeColor = System.Drawing.Color.White;
+            this.requestsBtn.Location = new System.Drawing.Point(0, 0);
+            this.requestsBtn.Name = "requestsBtn";
+            this.requestsBtn.Size = new System.Drawing.Size(186, 40);
+            this.requestsBtn.TabIndex = 0;
+            this.requestsBtn.Text = "Requests";
+            this.requestsBtn.UseVisualStyleBackColor = false;
+            this.requestsBtn.Click += new System.EventHandler(this.requestsBtn_Click);
             // 
             // contentPnl
             // 

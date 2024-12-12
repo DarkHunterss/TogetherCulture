@@ -1,0 +1,185 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_PRITAM_ONEDRIVE_DESKTOP_PROJECTNEW_TOGETHERCULTURE_TOGETHERCULTURE_TOGETHER_CULTURE.MDF/True/SqlTable/dbo.users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|c:\\users\\pritam\\onedrive\\desktop\\projectnew\\togetherculture\\togetherculture\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherculture\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherculture\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherculture\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherculture\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherculture\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherculture\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherculture\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherculture\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\DBConnection.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\DBConnection.cs",
+              "ToolTip": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\DBConnection.cs",
+              "RelativeToolTip": "togetherCulture\\DBConnection.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T04:54:07.887Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dbo.users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_PRITAM_ONEDRIVE_DESKTOP_PROJECTNEW_TOGETHERCULTURE_TOGETHERCULTURE_TOGETHER_CULTURE.MDF/True/SqlTable/dbo.users.sql",
+              "ToolTip": "dbo.users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-12-06T23:04:05.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Signup.cs",
+              "DocumentMoniker": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\Signup.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\Signup.cs",
+              "ToolTip": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\Signup.cs",
+              "RelativeToolTip": "togetherCulture\\Signup.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAiwC8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T20:19:55.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Utility.cs",
+              "DocumentMoniker": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\Utility.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\Utility.cs",
+              "ToolTip": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\Utility.cs",
+              "RelativeToolTip": "togetherCulture\\Utility.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAiwDIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T20:20:04.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserManager.cs",
+              "DocumentMoniker": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\UserManager.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\UserManager.cs",
+              "ToolTip": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\UserManager.cs",
+              "RelativeToolTip": "togetherCulture\\UserManager.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAACMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T19:26:57.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Signup.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\Signup.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\Signup.cs",
+              "ToolTip": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\Signup.cs [Design]",
+              "RelativeToolTip": "togetherCulture\\Signup.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T18:41:25.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\Login.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\Login.cs",
+              "ToolTip": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\Login.cs",
+              "RelativeToolTip": "togetherCulture\\Login.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAADAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T18:23:25.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\Login.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\Login.cs",
+              "ToolTip": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\Login.cs [Design]",
+              "RelativeToolTip": "togetherCulture\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T18:23:23.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\Program.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\Program.cs",
+              "ToolTip": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\Program.cs",
+              "RelativeToolTip": "togetherCulture\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T18:05:08.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Globals.cs",
+              "DocumentMoniker": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\Globals.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\Globals.cs",
+              "ToolTip": "C:\\Users\\Pritam\\OneDrive\\Desktop\\projectNew\\togetherCulture\\togetherCulture\\Globals.cs",
+              "RelativeToolTip": "togetherCulture\\Globals.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAIwAMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T17:50:52.677Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

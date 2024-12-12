@@ -21,7 +21,7 @@ namespace togetherCulture
             contentPnl.Controls.Clear();
 
             string query = @"
-                SELECT cb.Description, cb.Date, u.Username 
+                SELECT cb.ID, cb.Description, cb.Date, u.Username 
                 FROM connections_board cb
                 JOIN users u ON cb.UserID = u.ID
                 WHERE cb.Type = 'Request'";
@@ -42,7 +42,7 @@ namespace togetherCulture
 
             foreach (DataRow row in requests.Rows)
             {
-                AddRequestToPanel(Convert.ToInt32(row["ID"]), row["Description"].ToString(), Convert.ToDateTime(row["Date"]), row["Username"].ToString());
+                AddConnectionToPanel(Convert.ToInt32(row["ID"]), row["Description"].ToString(), Convert.ToDateTime(row["Date"]), row["Username"].ToString());
             }
         }
 
@@ -51,7 +51,7 @@ namespace togetherCulture
             contentPnl.Controls.Clear();
 
             string query = @"
-                SELECT cb.Description, cb.Date, u.Username 
+                SELECT cb.ID, cb.Description, cb.Date, u.Username 
                 FROM connections_board cb
                 JOIN users u ON cb.UserID = u.ID
                 WHERE cb.Type = 'Offer'";
@@ -72,17 +72,17 @@ namespace togetherCulture
 
             foreach (DataRow row in offers.Rows)
             {
-                AddRequestToPanel(Convert.ToInt32(row["ID"]), row["Description"].ToString(), Convert.ToDateTime(row["Date"]), row["Username"].ToString());
+                AddConnectionToPanel(Convert.ToInt32(row["ID"]), row["Description"].ToString(), Convert.ToDateTime(row["Date"]), row["Username"].ToString());
             }
         }
 
 
-        private void AddRequestToPanel(int reqOffId, string description, DateTime date, string username)
+        private void AddConnectionToPanel(int connectionId, string description, DateTime date, string username)
         {
-            Panel requestPanel = new Panel
+            Panel connectionPanel = new Panel
             {
                 BackColor = Color.White,
-                Size = new Size(975, 120),
+                Size = new Size(970, 125),
                 Margin = new Padding(5)
             };
 
@@ -99,14 +99,14 @@ namespace togetherCulture
                 Text = $"Posted on: {date.ToShortDateString()}",
                 Font = new Font("Segoe UI", 12, FontStyle.Italic),
                 Location = new Point(10, 90),
-                Size = new Size(800, 20)
+                Size = new Size(800, 40)
             };
 
             Label usernameLabel = new Label
             {
-                Text = $"Posted by: {username}",
+                Text = $"by: {username}",
                 Font = new Font("Segoe UI", 12, FontStyle.Italic),
-                TextAlign = ContentAlignment.TopRight,
+                Location = new Point(90, 140),
                 AutoSize = true
             };
 
@@ -121,39 +121,39 @@ namespace togetherCulture
                     BackColor = Color.DarkGray,
                     FlatStyle = FlatStyle.Flat,
                     Size = new Size(110, 40),
-                    Location = new Point(850, 95),
-                    Tag = reqOffId,
+                    Location = new Point(850, 75),
+                    Tag = connectionId,
                     Cursor = Cursors.Hand,
                 };
 
                 removeButton.Click += (sender, e) =>
                 {
-                    var confirmResult = MessageBox.Show($"Are you sure you want to remove the event?",
+                    var confirmResult = MessageBox.Show($"Are you sure you want to remove the connection?",
                         "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (confirmResult == DialogResult.Yes)
                     {
-                        RemoveRequestOffer(reqOffId);
+                        RemoveConnection(connectionId);
                     }
                 };
 
-                requestPanel.Controls.Add(removeButton);
+                connectionPanel.Controls.Add(removeButton);
             }
 
 
             // Align the username label to the right side of the panel
             usernameLabel.Location = new Point(
-                requestPanel.Width - usernameLabel.PreferredWidth - 10,
+                connectionPanel.Width - usernameLabel.PreferredWidth - 10,
                 dateLabel.Top
             );
 
             // Add controls to the panel
-            requestPanel.Controls.Add(descriptionLabel);
-            requestPanel.Controls.Add(dateLabel);
-            requestPanel.Controls.Add(usernameLabel);
+            connectionPanel.Controls.Add(descriptionLabel);
+            connectionPanel.Controls.Add(dateLabel);
+            connectionPanel.Controls.Add(usernameLabel);
 
             // Add the panel to the main container
-            contentPnl.Controls.Add(requestPanel);
+            contentPnl.Controls.Add(connectionPanel);
         }
 
         private void SetActiveTab(Button activeButton)
@@ -183,12 +183,13 @@ namespace togetherCulture
             return requestsBtn;
         }
 
-        private void RemoveRequestOffer(int reqOffId)
+        private void RemoveConnection(int connectionId)
         {
+            Console.WriteLine("helllooo: " + connectionId);
             try
             {
-                string deleteQuery = "DELETE FROM connection_board WHERE ID = @reqOffId";
-                SqlParameter[] parameters = { new SqlParameter("@ID", reqOffId) };
+                string deleteQuery = "DELETE FROM connections_board WHERE ID = @ConnectionID";
+                SqlParameter[] parameters = { new SqlParameter("@ConnectionID", connectionId) };
 
                 int rowsAffected = DBConnection.getConnectionInstance().executeNonQuery(deleteQuery, parameters);
 

@@ -1,0 +1,151 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherculture\\connectionboardscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\connectionboardscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|c:\\users\\ap1617\\appdata\\local\\development\\projectnew\\togetherculture\\togetherculture\\membersscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\membersscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|c:\\users\\ap1617\\appdata\\local\\development\\projectnew\\togetherculture\\togetherculture\\eventsscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\eventsscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|c:\\users\\ap1617\\appdata\\local\\development\\projectnew\\togetherculture\\togetherculture\\eventsscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\eventsscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherculture\\connectionboardscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\connectionboardscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherculture\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherculture\\documentsscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\documentsscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherculture\\digitalcontentscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E47B29DA-0284-41D1-B86A-B4A275C48016}|togetherCulture\\togetherCulture.csproj|solutionrelative:togetherculture\\digitalcontentscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EventsScreen.cs",
+              "DocumentMoniker": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\EventsScreen.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\EventsScreen.cs",
+              "ToolTip": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\EventsScreen.cs",
+              "RelativeToolTip": "togetherCulture\\EventsScreen.cs",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAhwJEAAABvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T10:39:04.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MembersScreen.cs",
+              "DocumentMoniker": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\MembersScreen.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\MembersScreen.cs",
+              "ToolTip": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\MembersScreen.cs",
+              "RelativeToolTip": "togetherCulture\\MembersScreen.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAgwEAAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T10:14:45.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConnectionBoardScreen.cs",
+              "DocumentMoniker": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\ConnectionBoardScreen.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\ConnectionBoardScreen.cs",
+              "ToolTip": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\ConnectionBoardScreen.cs",
+              "RelativeToolTip": "togetherCulture\\ConnectionBoardScreen.cs",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAIwIIAAABoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T17:55:48.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EventsScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\EventsScreen.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\EventsScreen.cs",
+              "ToolTip": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\EventsScreen.cs [Design]",
+              "RelativeToolTip": "togetherCulture\\EventsScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T16:03:38.333Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\Login.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\Login.cs",
+              "ToolTip": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\Login.cs [Design]",
+              "RelativeToolTip": "togetherCulture\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T17:51:01.874Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DocumentsScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\DocumentsScreen.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\DocumentsScreen.cs",
+              "ToolTip": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\DocumentsScreen.cs [Design]",
+              "RelativeToolTip": "togetherCulture\\DocumentsScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T16:04:07.81Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DigitalContentScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\DigitalContentScreen.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\DigitalContentScreen.cs",
+              "ToolTip": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\DigitalContentScreen.cs [Design]",
+              "RelativeToolTip": "togetherCulture\\DigitalContentScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T16:02:04.183Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConnectionBoardScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\ConnectionBoardScreen.cs",
+              "RelativeDocumentMoniker": "togetherCulture\\ConnectionBoardScreen.cs",
+              "ToolTip": "C:\\Users\\ap1617\\AppData\\Local\\Development\\projectNew\\togetherCulture\\togetherCulture\\ConnectionBoardScreen.cs [Design]",
+              "RelativeToolTip": "togetherCulture\\ConnectionBoardScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T15:56:35.845Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

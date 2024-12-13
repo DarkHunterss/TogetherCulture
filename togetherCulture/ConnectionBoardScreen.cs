@@ -44,7 +44,7 @@ namespace togetherCulture
             {
                 AddConnectionToPanel(Convert.ToInt32(row["ID"]), row["Description"].ToString(), Convert.ToDateTime(row["Date"]), row["Username"].ToString());
             }
-        }
+        } 
 
         private void LoadOffers()
         {
@@ -82,8 +82,9 @@ namespace togetherCulture
             Panel connectionPanel = new Panel
             {
                 BackColor = Color.White,
-                Size = new Size(970, 125),
-                Margin = new Padding(5)
+                Size = new Size(970, 150),
+                Margin = new Padding(5),
+                Padding = new Padding(10)
             };
 
             Label descriptionLabel = new Label
@@ -98,17 +99,38 @@ namespace togetherCulture
             {
                 Text = $"Posted on: {date.ToShortDateString()}",
                 Font = new Font("Segoe UI", 12, FontStyle.Italic),
-                Location = new Point(10, 90),
-                Size = new Size(800, 40)
+                Location = new Point(10, 110),
+                Size = new Size(170, 30)
             };
 
-            Label usernameLabel = new Label
+            if (Globals.CurrentLoggedInUserRole == "Admin")
             {
-                Text = $"by: {username}",
-                Font = new Font("Segoe UI", 12, FontStyle.Italic),
-                Location = new Point(90, 140),
-                AutoSize = true
-            };
+                Label usernameLabel = new Label
+                {
+                    Text = $"by: {username}",
+                    Font = new Font("Segoe UI", 12, FontStyle.Italic),
+                    Location = new Point(190, 110),
+                    Size = new Size(100, 30)
+                };
+                connectionPanel.Controls.Add(usernameLabel);
+            }
+            else
+            {
+                Label usernameLabel = new Label
+                {
+                    Text = $"by: {username}",
+                    Font = new Font("Segoe UI", 12, FontStyle.Italic),
+                    Location = new Point(650, 110),
+                    Size = new Size(100, 30)
+                };
+
+                usernameLabel.Location = new Point(
+                    connectionPanel.Width - usernameLabel.PreferredWidth - 10,
+                    dateLabel.Top
+                );
+
+                connectionPanel.Controls.Add(usernameLabel);
+            }
 
             // Add Remove button (only for admins)
             if (Globals.CurrentLoggedInUserRole == "Admin")
@@ -121,10 +143,11 @@ namespace togetherCulture
                     BackColor = Color.DarkGray,
                     FlatStyle = FlatStyle.Flat,
                     Size = new Size(110, 40),
-                    Location = new Point(850, 75),
+                    Location = new Point(840, 90),
                     Tag = connectionId,
                     Cursor = Cursors.Hand,
                 };
+
 
                 removeButton.Click += (sender, e) =>
                 {
@@ -141,16 +164,10 @@ namespace togetherCulture
             }
 
 
-            // Align the username label to the right side of the panel
-            usernameLabel.Location = new Point(
-                connectionPanel.Width - usernameLabel.PreferredWidth - 10,
-                dateLabel.Top
-            );
-
             // Add controls to the panel
             connectionPanel.Controls.Add(descriptionLabel);
             connectionPanel.Controls.Add(dateLabel);
-            connectionPanel.Controls.Add(usernameLabel);
+            
 
             // Add the panel to the main container
             contentPnl.Controls.Add(connectionPanel);
@@ -185,7 +202,6 @@ namespace togetherCulture
 
         private void RemoveConnection(int connectionId)
         {
-            Console.WriteLine("helllooo: " + connectionId);
             try
             {
                 string deleteQuery = "DELETE FROM connections_board WHERE ID = @ConnectionID";

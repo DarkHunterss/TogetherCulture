@@ -13,6 +13,7 @@ namespace togetherCulture
     public partial class MainWindow : Form
     {
         private ScreenController screenController;
+        private DashboardScreen _dashboardScreen;
 
         public MainWindow()
         {
@@ -31,12 +32,13 @@ namespace togetherCulture
 
             // Create and add UserControls to the ScreenController
             var dashboardScreen = new DashboardScreen(this);
+            _dashboardScreen = dashboardScreen;
             var connectionBoardScreen = new ConnectionBoardScreen();
             var documentsScreen = new DocumentsScreen();
             var digitalContentScreen = new DigitalContentScreen();
             var membersScreen = new MembersScreen();
             var eventsScreen = new EventsScreen();
-            var membershipScreen = new MembershipScreen(this);
+            var membershipScreen = new MembershipScreen(this,dashboardScreen);
 
             screenController.AddScreen("Dashboard", dashboardScreen);
             screenController.AddScreen("Connection board", connectionBoardScreen);
@@ -75,6 +77,7 @@ namespace togetherCulture
             Text = "Dashboard";
             screenController.ShowScreen("Dashboard");
             HighlightSelectedTab(dashboardLbl);
+            _dashboardScreen.LoadActivityDetails();
         }
 
         private void ConnectionBoardLbl_Click(object sender, EventArgs e)

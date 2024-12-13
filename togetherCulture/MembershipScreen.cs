@@ -10,11 +10,14 @@ namespace togetherCulture
     public partial class MembershipScreen : UserControl
     {
         private MainWindow _mainWindow;
+        private DashboardScreen _dashboardScreen;
 
-        public MembershipScreen(MainWindow mainWindow)
+
+        public MembershipScreen(MainWindow mainWindow, DashboardScreen dashboardScreen)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
+            _dashboardScreen = dashboardScreen;
 
             // Load memberships dynamically
             LoadMemberships(Globals.CurrentLoggedInUserID);
@@ -176,7 +179,7 @@ namespace togetherCulture
 
             signUpButton.Click += (sender, e) =>
             {
-                using (PaymentDialog paymentDialog = new PaymentDialog(membershipId, userId))
+                using (PaymentDialog paymentDialog = new PaymentDialog(membershipId, userId, _dashboardScreen))
                 {
                     if (paymentDialog.ShowDialog() == DialogResult.OK)
                     {

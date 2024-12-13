@@ -106,8 +106,8 @@ namespace togetherCulture
                     ForeColor = Color.White,
                     BackColor = Color.IndianRed,
                     FlatStyle = FlatStyle.Flat,
-                    Size = new Size(100, 30),
-                    Location = new Point(850, 35),
+                    Size = new Size(110, 40),
+                    Location = new Point(850, 40),
                     Tag = userId
                 };
 

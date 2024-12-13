@@ -104,23 +104,35 @@ namespace togetherCulture
                 Size = new Size(200, 20)
             };
 
-            // Add Register button
+            // Determine if the user is already registered for the event
+            bool isRegistered = IsUserRegistered(eventId);
+
+            // Add Register/Unregister button
             Button registerButton = new Button
             {
-                Text = "Register",
+                Text = isRegistered ? "Unregister" : "Register",
                 Font = new Font("Segoe UI semibold", 12),
                 ForeColor = Color.White,
-                BackColor = Color.DarkGray,
+                BackColor = Color.IndianRed,
                 FlatStyle = FlatStyle.Flat,
                 Size = new Size(110, 40),
-                Location = new Point(730, 95),
+                Location = new Point(850, 95),
                 Cursor = Cursors.Hand,
                 Tag = eventId
             };
 
             registerButton.Click += (sender, e) =>
             {
-                RegisterForEvent(eventId);
+                if (registerButton.Text == "Register")
+                {
+                    RegisterForEvent(eventId);
+                    registerButton.Text = "Unregister";
+                }
+                else
+                {
+                    UnregisterFromEvent(eventId);
+                    registerButton.Text = "Register";
+                }
             };
 
             eventPanel.Controls.Add(registerButton);
@@ -136,7 +148,7 @@ namespace togetherCulture
                     BackColor = Color.DarkGray,
                     FlatStyle = FlatStyle.Flat,
                     Size = new Size(110, 40),
-                    Location = new Point(850, 95),
+                    Location = new Point(730, 95),
                     Tag = eventId,
                     Cursor = Cursors.Hand,
                 };
@@ -170,6 +182,55 @@ namespace togetherCulture
             // Add the event panel to the main panel
             eventPnl.Controls.Add(eventPanel);
         }
+
+        private bool IsUserRegistered(int eventId)
+        {
+            try
+            {
+                string query = "SELECT COUNT(*) FROM event_registration WHERE MemberID = @MemberID AND EventID = @EventID";
+                SqlParameter[] parameters = {
+            new SqlParameter("@MemberID", Globals.CurrentLoggedInUserID),
+            new SqlParameter("@EventID", eventId)
+        };
+                object result = DBConnection.getConnectionInstance().executeScalar(query, parameters);
+
+                return result != DBNull.Value && Convert.ToInt32(result) > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error checking registration: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        private void UnregisterFromEvent(int eventId)
+        {
+            try
+            {
+                string query = "DELETE FROM event_registration WHERE MemberID = @MemberID AND EventID = @EventID";
+                SqlParameter[] parameters = {
+                    new SqlParameter("@MemberID", Globals.CurrentLoggedInUserID),
+                    new SqlParameter("@EventID", eventId)
+                };
+
+                int rowsAffected = DBConnection.getConnectionInstance().executeNonQuery(query, parameters);
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Successfully unregistered from the event.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to unregister from the event.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error unregistering from the event: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
 
         private void RegisterForEvent(int eventId)
         {

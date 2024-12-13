@@ -27,7 +27,8 @@ namespace togetherCulture
             LoadUserImage();
             LoadUserPreferences();
             LoadBenefitsOverview();
-            LoadActivityDetails();
+            LoadSuggestedEvents();
+            LoadActivityDetails(); //"Column", "Bar", "Pie", "Line", "Area"
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)
@@ -228,55 +229,250 @@ namespace togetherCulture
             }
         }
 
-        private void LoadActivityDetails()
+        private void LoadSuggestedEvents()
         {
             try
             {
                 // Clear existing controls
-                activityDataPnl.Controls.Clear();
+                eventsDataPnl.Controls.Clear();
+
+                // Query to fetch user's interests ranked 1 or 2
+                string interestQuery = "SELECT Interest FROM user_preference WHERE UserID = @UserId";
+                SqlParameter[] interestParams = { new SqlParameter("@UserId", Globals.CurrentLoggedInUserID) };
+                DataTable interestTable = DBConnection.getConnectionInstance().executeQuery(interestQuery, interestParams);
+
+                if (interestTable.Rows.Count > 0)
+                {
+                    // Extract user interests with rank 1 or 2
+                    string[] rankedInterests = interestTable.Rows[0]["Interest"].ToString()
+                                                .Split(',')
+                                                .Select(i => i.Trim())
+                                                .Where(i => int.Parse(i.Split(':')[1]) <= 2) // Filter ranks 1 and 2
+                                                .Select(i => i.Split(':')[0]) // Extract interest names
+                                                .ToArray();
+
+                    if (rankedInterests.Length > 0)
+                    {
+                        // Build a query to fetch events that match user interests
+                        string eventQuery = @"
+                    SELECT ID, Name, Description, Date, Location, AttendanceCount 
+                    FROM event_list 
+                    WHERE ";
+                        eventQuery += string.Join(" OR ", rankedInterests.Select((_, index) => $"Tags LIKE @Interest{index}"));
+
+                        // Create SQL parameters for interests
+                        List<SqlParameter> eventParams = rankedInterests
+                            .Select((interest, index) => new SqlParameter($"@Interest{index}", $"%{interest}%"))
+                            .ToList();
+
+                        DataTable eventTable = DBConnection.getConnectionInstance().executeQuery(eventQuery, eventParams.ToArray());
+
+                        if (eventTable.Rows.Count > 0)
+                        {
+                            // Populate the suggested events
+                            foreach (DataRow row in eventTable.Rows)
+                            {
+                                string eventName = row["Name"].ToString();
+                                string description = row["Description"].ToString();
+                                string location = row["Location"].ToString();
+                                DateTime eventDate = Convert.ToDateTime(row["Date"]);
+                                int attendanceCount = Convert.ToInt32(row["AttendanceCount"]);
+
+                                AddEventToPanel(eventName, description, location, eventDate, attendanceCount);
+                            }
+                        }
+                        else
+                        {
+                            AddNoEventsMessage("No events match your top interests.");
+                        }
+                    }
+                    else
+                    {
+                        AddNoEventsMessage("No top-ranked interests found to suggest events.");
+                    }
+                }
+                else
+                {
+                    AddNoEventsMessage("No interests found. Update your profile to see suggested events.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading suggested events: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void AddEventToPanel(string eventName, string description, string location, DateTime eventDate, int attendanceCount)
+        {
+            Panel eventPanel = new Panel
+            {
+                BackColor = Color.White,
+                Size = new Size(eventsDataPnl.Width - 40, 130),
+                Margin = new Padding(10)
+            };
+
+            Label nameLabel = new Label
+            {
+                Text = $"Event: {eventName}",
+                Font = new Font("Segoe UI semibold", 12),
+                Location = new Point(10, 10),
+                AutoSize = true
+            };
+
+            Label descriptionLabel = new Label
+            {
+                Text = $"Description: {description}",
+                Font = new Font("Segoe UI", 10, FontStyle.Regular),
+                Location = new Point(10, 40),
+                Size = new Size(eventPanel.Width - 20, 40)
+            };
+
+            Label locationLabel = new Label
+            {
+                Text = $"Location: {location}",
+                Font = new Font("Segoe UI", 10, FontStyle.Regular),
+                Location = new Point(10, 90),
+                AutoSize = true
+            };
+
+            Label dateLabel = new Label
+            {
+                Text = $"Date: {eventDate.ToShortDateString()}",
+                Font = new Font("Segoe UI", 10, FontStyle.Regular),
+                Location = new Point(300, 90),
+                AutoSize = true
+            };
+
+            Label attendanceLabel = new Label
+            {
+                Text = $"Attendance: {attendanceCount}",
+                Font = new Font("Segoe UI", 10, FontStyle.Regular),
+                Location = new Point(500, 90),
+                AutoSize = true
+            };
+
+            eventPanel.Controls.Add(nameLabel);
+            eventPanel.Controls.Add(descriptionLabel);
+            eventPanel.Controls.Add(locationLabel);
+            eventPanel.Controls.Add(dateLabel);
+            eventPanel.Controls.Add(attendanceLabel);
+
+            eventsDataPnl.Controls.Add(eventPanel);
+        }
+
+        private void AddNoEventsMessage(string message)
+        {
+            Label noEventsLabel = new Label
+            {
+                Text = message,
+                Font = new Font("Segoe UI", 12, FontStyle.Italic),
+                ForeColor = Color.Black,
+                TextAlign = ContentAlignment.MiddleCenter,
+                Dock = DockStyle.Fill
+            };
+
+            eventsDataPnl.Controls.Add(noEventsLabel);
+        }
+
+        public void LoadActivityDetails(string chartType = "Area")
+        {
+            try
+            {
+                // Clear existing controls in the activity panel
+                chatPnl.Controls.Clear();
+
+                // Initialize activity counts
+                int loginCount = 0;
+                int documentCount = 0;
+                int eventRegistrationCount = 0;
+
+                // Fetch data
+                string loginQuery = "SELECT TotalVisits FROM users WHERE ID = @UserId";
+                SqlParameter[] loginParams = { new SqlParameter("@UserId", Globals.CurrentLoggedInUserID) };
+                object loginResult = DBConnection.getConnectionInstance().executeScalar(loginQuery, loginParams);
+                loginCount = loginResult != DBNull.Value ? Convert.ToInt32(loginResult) : 0;
+
+                string documentQuery = "SELECT COUNT(*) FROM document WHERE UploadedBy = @UserId";
+                SqlParameter[] documentParams = { new SqlParameter("@UserId", Globals.CurrentLoggedInUserID) };
+                object documentResult = DBConnection.getConnectionInstance().executeScalar(documentQuery, documentParams);
+                documentCount = documentResult != DBNull.Value ? Convert.ToInt32(documentResult) : 0;
+
+                string eventQuery = "SELECT COUNT(*) FROM event_registration WHERE MemberID = @UserId";
+                SqlParameter[] eventParams = { new SqlParameter("@UserId", Globals.CurrentLoggedInUserID) };
+                object eventResult = DBConnection.getConnectionInstance().executeScalar(eventQuery, eventParams);
+                eventRegistrationCount = eventResult != DBNull.Value ? Convert.ToInt32(eventResult) : 0;
 
                 // Create and configure the chart
                 Chart activityChart = new Chart
                 {
                     Dock = DockStyle.Fill,
-                    BackColor = System.Drawing.Color.White
+                    BackColor = Color.White
                 };
 
-                // Create the chart area
                 ChartArea chartArea = new ChartArea
                 {
-                    Name = "MainChartArea",
-                    BackColor = System.Drawing.Color.LightGray
+                    Name = "ActivityChartArea",
+                    BackColor = Color.White,
+                    AxisX =
+            {
+                Interval = 1,
+                LineColor = Color.Black,
+                LabelStyle = { Font = new Font("Segoe UI", 10), ForeColor = Color.Black }
+            },
+                    AxisY =
+            {
+                LineColor = Color.Black,
+                LabelStyle = { Font = new Font("Segoe UI", 10), ForeColor = Color.Black }
+            }
                 };
                 activityChart.ChartAreas.Add(chartArea);
 
-                // Create the data series
+                // Create a data series with dynamic chart type
                 Series series = new Series
                 {
                     Name = "ActivitySeries",
-                    ChartType = SeriesChartType.Column,
-                    ChartArea = "MainChartArea",
-                    IsValueShownAsLabel = true
+                    ChartArea = "ActivityChartArea",
+                    IsValueShownAsLabel = true,
+                    Color = Color.IndianRed,
+                    BorderWidth = 2
                 };
 
-                // Example data
-                var activityData = new Dictionary<string, int>
+                // Set chart type dynamically
+                switch (chartType)
                 {
-                    { "Logins", 10 },
-                    { "Documents", 5 },
-                    { "Events", 3 },
-                    { "Downloads", 7 }
-                };
-
-                foreach (var item in activityData)
-                {
-                    series.Points.AddXY(item.Key, item.Value);
+                    case "Bar":
+                        series.ChartType = SeriesChartType.Bar;
+                        break;
+                    case "Pie":
+                        series.ChartType = SeriesChartType.Pie;
+                        break;
+                    case "Line":
+                        series.ChartType = SeriesChartType.Line;
+                        break;
+                    case "Area":
+                        series.ChartType = SeriesChartType.Area;
+                        break;
+                    default: // Default to Column
+                        series.ChartType = SeriesChartType.Column;
+                        break;
                 }
 
+                // Add data points
+                series.Points.AddXY("Logins", loginCount);
+                series.Points.AddXY("Documents", documentCount);
+                series.Points.AddXY("Event Reg.", eventRegistrationCount);
+
+                // Add series to chart
                 activityChart.Series.Add(series);
 
-                // Add the chart to the panel
-                activityDataPnl.Controls.Add(activityChart);
+                // Add chart to panel
+                chatPnl.Controls.Add(activityChart);
+
+                // Force rendering
+                activityChart.Refresh();
+                chatPnl.Refresh();
+
+                Console.WriteLine("Activity chart rendered successfully.");
             }
             catch (Exception ex)
             {

@@ -60,6 +60,18 @@
     <Compile Include="AddConnectionDialog.Designer.cs">
       <DependentUpon>AddConnectionDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddContentDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddContentDialog.Designer.cs">
+      <DependentUpon>AddContentDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDocumentDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDocumentDialog.Designer.cs">
+      <DependentUpon>AddDocumentDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionBoardScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -159,6 +171,12 @@
     <Compile Include="Utility.cs" />
     <EmbeddedResource Include="AddConnectionDialog.resx">
       <DependentUpon>AddConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddContentDialog.resx">
+      <DependentUpon>AddContentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDocumentDialog.resx">
+      <DependentUpon>AddDocumentDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConnectionBoardScreen.resx">
       <DependentUpon>ConnectionBoardScreen.cs</DependentUpon>

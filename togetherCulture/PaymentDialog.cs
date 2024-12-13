@@ -13,13 +13,15 @@ namespace togetherCulture
         private int _membershipId;
         private int _userId;
         private decimal _paymentAmount; // Changed type to decimal for proper calculation
+        private DashboardScreen _dashboardScreen;
 
 
-        public PaymentDialog(int membershipId, int userId)
+        public PaymentDialog(int membershipId, int userId, DashboardScreen dashboardScreen)  
         {
             InitializeComponent();
             _membershipId = membershipId;
             _userId = userId;
+
 
             // Disable resizing
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -29,6 +31,7 @@ namespace togetherCulture
             StartPosition = FormStartPosition.CenterScreen;
 
             LoadMembershipDetails();
+            _dashboardScreen = dashboardScreen;
         }
 
         private void LoadMembershipDetails()
@@ -102,8 +105,12 @@ namespace togetherCulture
                 };
 
                 var userManager = new UserManager();
-                userManager.UpdateUserRoleToMember(Globals.CurrentLoggedInUserID);
 
+                if (Globals.CurrentLoggedInUserRole != "Admin")
+                {
+                    userManager.UpdateUserRoleToMember(Globals.CurrentLoggedInUserID);
+                }
+                
                 int rowsAffected = DBConnection.getConnectionInstance().executeNonQuery(updateQuery, updateParams);
 
                 if (rowsAffected > 0)
@@ -120,7 +127,7 @@ namespace togetherCulture
                     DBConnection.getConnectionInstance().executeNonQuery(insertPaymentQuery, paymentParams);
 
                     // Refresh the benefits overview when the payment is completed
-                    //LoadBenefitsOverview();
+                    _dashboardScreen.LoadBenefitsOverview();
 
                     // Notify user
                     ShowDialogMessage("Payment successful! Membership updated.", "Success");

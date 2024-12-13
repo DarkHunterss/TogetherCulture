@@ -49,12 +49,12 @@
             // 
             // addBtn
             // 
-            this.addBtn.BackColor = System.Drawing.Color.Gray;
+            this.addBtn.BackColor = System.Drawing.Color.IndianRed;
             this.addBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.ForeColor = System.Drawing.Color.White;
-            this.addBtn.Location = new System.Drawing.Point(886, 0);
+            this.addBtn.Location = new System.Drawing.Point(882, 1);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(95, 40);
             this.addBtn.TabIndex = 2;
@@ -95,7 +95,7 @@
             // contentPnl
             // 
             this.contentPnl.AutoScroll = true;
-            this.contentPnl.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.contentPnl.BackColor = System.Drawing.SystemColors.Control;
             this.contentPnl.Location = new System.Drawing.Point(0, 49);
             this.contentPnl.Name = "contentPnl";
             this.contentPnl.Size = new System.Drawing.Size(1006, 540);

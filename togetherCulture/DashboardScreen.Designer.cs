@@ -51,7 +51,7 @@
             this.benefitsPnl = new System.Windows.Forms.Panel();
             this.benefitsDataPnl = new System.Windows.Forms.FlowLayoutPanel();
             this.activityPnl = new System.Windows.Forms.Panel();
-            this.activityDataPnl = new System.Windows.Forms.FlowLayoutPanel();
+            this.chatPnl = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userImg)).BeginInit();
             this.panel2.SuspendLayout();
@@ -64,7 +64,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.userImg);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.usernameLbl);
@@ -78,6 +78,7 @@
             // 
             // userImg
             // 
+            this.userImg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.userImg.Location = new System.Drawing.Point(21, 10);
             this.userImg.Name = "userImg";
             this.userImg.Size = new System.Drawing.Size(145, 145);
@@ -129,7 +130,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(307, 21);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Activity Details";
+            this.label6.Text = "Activity Chart";
             // 
             // label5
             // 
@@ -204,40 +205,40 @@
             // 
             // interestsPnl
             // 
-            this.interestsPnl.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.interestsPnl.BackColor = System.Drawing.Color.White;
             this.interestsPnl.Controls.Add(this.interestsDataPnl);
             this.interestsPnl.Controls.Add(this.label3);
             this.interestsPnl.Location = new System.Drawing.Point(0, 228);
             this.interestsPnl.Margin = new System.Windows.Forms.Padding(5);
             this.interestsPnl.Name = "interestsPnl";
             this.interestsPnl.Padding = new System.Windows.Forms.Padding(10);
-            this.interestsPnl.Size = new System.Drawing.Size(328, 182);
+            this.interestsPnl.Size = new System.Drawing.Size(328, 169);
             this.interestsPnl.TabIndex = 41;
             // 
             // interestsDataPnl
             // 
             this.interestsDataPnl.Location = new System.Drawing.Point(13, 33);
             this.interestsDataPnl.Name = "interestsDataPnl";
-            this.interestsDataPnl.Size = new System.Drawing.Size(298, 136);
+            this.interestsDataPnl.Size = new System.Drawing.Size(298, 122);
             this.interestsDataPnl.TabIndex = 6;
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.intentionDataPnl);
             this.panel7.Controls.Add(this.intensionsPnl);
             this.panel7.Location = new System.Drawing.Point(338, 228);
             this.panel7.Margin = new System.Windows.Forms.Padding(5);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(10);
-            this.panel7.Size = new System.Drawing.Size(328, 182);
+            this.panel7.Size = new System.Drawing.Size(328, 169);
             this.panel7.TabIndex = 42;
             // 
             // intentionDataPnl
             // 
             this.intentionDataPnl.Location = new System.Drawing.Point(13, 33);
             this.intentionDataPnl.Name = "intentionDataPnl";
-            this.intentionDataPnl.Size = new System.Drawing.Size(302, 136);
+            this.intentionDataPnl.Size = new System.Drawing.Size(302, 122);
             this.intentionDataPnl.TabIndex = 7;
             // 
             // intensionsPnl
@@ -257,56 +258,58 @@
             this.eventsPnl.Location = new System.Drawing.Point(674, 49);
             this.eventsPnl.Margin = new System.Windows.Forms.Padding(5);
             this.eventsPnl.Name = "eventsPnl";
-            this.eventsPnl.Size = new System.Drawing.Size(332, 361);
+            this.eventsPnl.Size = new System.Drawing.Size(332, 348);
             this.eventsPnl.TabIndex = 58;
             // 
             // eventsDataPnl
             // 
+            this.eventsDataPnl.AutoScroll = true;
             this.eventsDataPnl.Location = new System.Drawing.Point(12, 34);
             this.eventsDataPnl.Name = "eventsDataPnl";
-            this.eventsDataPnl.Size = new System.Drawing.Size(307, 314);
+            this.eventsDataPnl.Size = new System.Drawing.Size(307, 300);
             this.eventsDataPnl.TabIndex = 8;
             // 
             // benefitsPnl
             // 
-            this.benefitsPnl.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.benefitsPnl.BackColor = System.Drawing.Color.White;
             this.benefitsPnl.Controls.Add(this.benefitsDataPnl);
             this.benefitsPnl.Controls.Add(this.label5);
-            this.benefitsPnl.Location = new System.Drawing.Point(0, 420);
+            this.benefitsPnl.Location = new System.Drawing.Point(0, 407);
             this.benefitsPnl.Margin = new System.Windows.Forms.Padding(5);
             this.benefitsPnl.Name = "benefitsPnl";
-            this.benefitsPnl.Size = new System.Drawing.Size(666, 218);
+            this.benefitsPnl.Size = new System.Drawing.Size(667, 231);
             this.benefitsPnl.TabIndex = 58;
             // 
             // benefitsDataPnl
             // 
             this.benefitsDataPnl.Location = new System.Drawing.Point(10, 33);
             this.benefitsDataPnl.Name = "benefitsDataPnl";
-            this.benefitsDataPnl.Size = new System.Drawing.Size(643, 173);
+            this.benefitsDataPnl.Size = new System.Drawing.Size(643, 186);
             this.benefitsDataPnl.TabIndex = 7;
             // 
             // activityPnl
             // 
-            this.activityPnl.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.activityPnl.Controls.Add(this.activityDataPnl);
+            this.activityPnl.BackColor = System.Drawing.Color.White;
             this.activityPnl.Controls.Add(this.label6);
-            this.activityPnl.Location = new System.Drawing.Point(674, 420);
+            this.activityPnl.Location = new System.Drawing.Point(674, 407);
             this.activityPnl.Margin = new System.Windows.Forms.Padding(5);
             this.activityPnl.Name = "activityPnl";
-            this.activityPnl.Size = new System.Drawing.Size(332, 218);
+            this.activityPnl.Size = new System.Drawing.Size(332, 231);
             this.activityPnl.TabIndex = 59;
             // 
-            // activityDataPnl
+            // chatPnl
             // 
-            this.activityDataPnl.Location = new System.Drawing.Point(12, 33);
-            this.activityDataPnl.Name = "activityDataPnl";
-            this.activityDataPnl.Size = new System.Drawing.Size(307, 173);
-            this.activityDataPnl.TabIndex = 7;
+            this.chatPnl.BackColor = System.Drawing.Color.White;
+            this.chatPnl.Location = new System.Drawing.Point(686, 440);
+            this.chatPnl.Name = "chatPnl";
+            this.chatPnl.Size = new System.Drawing.Size(307, 186);
+            this.chatPnl.TabIndex = 60;
             // 
             // DashboardScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.chatPnl);
             this.Controls.Add(this.activityPnl);
             this.Controls.Add(this.benefitsPnl);
             this.Controls.Add(this.eventsPnl);
@@ -356,6 +359,6 @@
         private System.Windows.Forms.FlowLayoutPanel intentionDataPnl;
         private System.Windows.Forms.FlowLayoutPanel eventsDataPnl;
         private System.Windows.Forms.FlowLayoutPanel benefitsDataPnl;
-        private System.Windows.Forms.FlowLayoutPanel activityDataPnl;
+        private System.Windows.Forms.Panel chatPnl;
     }
 }

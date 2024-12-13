@@ -31,7 +31,7 @@ namespace togetherCulture
             {
                 Label noEventsLabel = new Label
                 {
-                    Text = "No events available.",
+                    Text = "No Requests available.",
                     Font = new Font("Segoe UI", 14, FontStyle.Bold),
                     TextAlign = ContentAlignment.MiddleCenter,
                     Dock = DockStyle.Fill
@@ -61,7 +61,7 @@ namespace togetherCulture
             {
                 Label noEventsLabel = new Label
                 {
-                    Text = "No events available.",
+                    Text = "No Offers available.",
                     Font = new Font("Segoe UI", 14, FontStyle.Bold),
                     TextAlign = ContentAlignment.MiddleCenter,
                     Dock = DockStyle.Fill
